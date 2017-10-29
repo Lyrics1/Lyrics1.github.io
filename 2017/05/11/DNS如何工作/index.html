@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      DNS如何工作 | Lyrics 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="ZF">
+    
+    
+
+    <meta name="description" content="DNS(域名系统）是一个分层分布式命名系统（会将Ip地址转化为人类容易记住的域名）   计算机和其他设备使用 ip 地址进行通信，以便在互联网上识别对方（192.168.1.1）  相对于我们所记得的是 网址  当客户端输入一个网址（www.dnsimple.com），想要得到相应的响应时，DNS就有很大的作用  浏览器首先检查自己是否谁知道www.dnsimple.com，然后重新启动操作系">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DNS如何工作 | Lyrics">
+<meta property="og:url" content="https://lyrics1.github.io/2017/05/11/DNS如何工作/index.html">
+<meta property="og:site_name" content="Lyrics">
+<meta property="og:description" content="DNS(域名系统）是一个分层分布式命名系统（会将Ip地址转化为人类容易记住的域名）   计算机和其他设备使用 ip 地址进行通信，以便在互联网上识别对方（192.168.1.1）  相对于我们所记得的是 网址  当客户端输入一个网址（www.dnsimple.com），想要得到相应的响应时，DNS就有很大的作用  浏览器首先检查自己是否谁知道www.dnsimple.com，然后重新启动操作系">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-05-11T12:25:26.050Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DNS如何工作 | Lyrics">
+<meta name="twitter:description" content="DNS(域名系统）是一个分层分布式命名系统（会将Ip地址转化为人类容易记住的域名）   计算机和其他设备使用 ip 地址进行通信，以便在互联网上识别对方（192.168.1.1）  相对于我们所记得的是 网址  当客户端输入一个网址（www.dnsimple.com），想要得到相应的响应时，DNS就有很大的作用  浏览器首先检查自己是否谁知道www.dnsimple.com，然后重新启动操作系">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Lyrics</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          &lt; More and better /&gt;
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+                
+                <li class="navigation__item"><a href="https://github.com/Lyrics1" title="" class="">github</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">DNS如何工作</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2017-05-11" class="post-meta__date date">2017-05-11</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <blockquote>
+<p> DNS(域名系统）是一个分层分布式命名系统（会将Ip地址转化为人类容易记住的域名）</p>
+</blockquote>
+<ol>
+<li>计算机和其他设备使用 ip 地址进行通信，以便在互联网上识别对方（192.168.1.1）</li>
+</ol>
+<p>相对于我们所记得的是 网址</p>
+<ol>
+<li><p>当客户端输入一个网址（www.dnsimple.com），想要得到相应的响应时，DNS就有很大的作用</p>
+</li>
+<li><p>浏览器首先检查自己是否谁知道www.dnsimple.com，然后重新启动操作系统，</p>
+</li>
+<li><p>hi操作系统，你知道我在哪里可以找到dnsimple.com吗？</p>
+</li>
+<li><p>浏览器和操作系统首先搜索缓存，看看他们是否知道dnsimple.com的IP。但是由于没有，操作系统</p>
+</li>
+</ol>
+<p>正在调用解析器（解析器服务器通常是您的ISP（Internet服务提供商）。所有解析器必须知道一个事</p>
+<p>情：在哪里找到根服务器。）。</p>
+<ol>
+<li><p>先会检查缓存是否有（没有），然后会会去找根服务器（root）,根服务器会知道在哪里找到.com</p>
+<p>服务器，(.com)顶级域名</p>
+</li>
+<li><p>根服务器就会问：你要干嘛？解析器会说：你知道dnsimple.com的的I地址吗？你知道在哪里找到它吗？</p>
+</li>
+<li><p>对不起解析器我不知道在哪里找到，但我可以告诉你在哪里找到.COM顶级域名服务</p>
+</li>
+<li><p>然后解析器就去找了，（但是解析器会存储下root刚才的访问信息，就不用再次去访问root）</p>
+</li>
+</ol>
+<p>（.com 根服务器只是今天存在的13个根名称服务器之一,根服务器位于DNS层次结构的顶部,</p>
+<p>它们分散在全球各地，由12个独立组织经营,它们被命名为[letter] .root-servers.net，其中[letter]</p>
+<p>的范围从A到M,但是 这并不意味着我们只有13台物理服务器来支持整个互联网，每个组织都提供分布</p>
+<p>在全球各地的多台物理服务器。）</p>
+<p>8.找到 .com 根服务器之后，解析器就会问相同的问题:你知道dnsimple.com的的I地址吗？你知道在</p>
+<p>哪里找到它吗？</p>
+<p>.com 服务器就说：哇！这是个很棒的问题哦！（.COM TLD是1985年第一个创建的。）</p>
+<p>但是恐怕我不知道dnsimple.com的IP地址，但是我知道dnsimple.com服务器在哪。</p>
+<p>解析器就说：好，我会存储下这些信息的</p>
+<p>然后 .COM找到域名dnsimple.com的权威名称服务器</p>
+<ol>
+<li>然后解析器就会再去找dnsimple.com的权威名称服务器，</li>
+</ol>
+<p>找到后就会说：你好 我唯一需要的是dnsimple.com的请求。 .COM </p>
+<p>TLD告诉我，ns1.dnsimple.com可以告诉我可以在哪里找到IP地址</p>
+<p>然后就会告诉解析器 ，dnsimple.com的 ip地址 ；</p>
+<p>解析器就会存储下来，然后回到浏览器进行连接；就可以得到自己想要的结果了</p>
+<p>10 . 你以为结束了吗？没有! 你发现什么没有，我们找到跟服务器，根服务器会告诉我们</p>
+<p>dnsimple.com服务器，然后才得到www.dnsimple.com（子域名）的服务器，才会的到 </p>
+<p>ip地址，但是我们如何直接得到www.dnsimple.com呢？</p>
+<p>ok :当解析器访问．ｃｏｍ服务器时，会有相应的相应信息，解析器会为没一个子域名系统起个名称</p>
+<p>（获取IP地址）</p>
+<h3 id="相关资料"><a href="#相关资料" class="headerlink" title="相关资料"></a>相关资料</h3><p><a href="https://howdns.works" target="_blank" rel="external">DNS如何工作？</a></p>
+<p><a href="http://www.jianshu.com/writer#/notebooks/6738141/notes/12197640" target="_blank" rel="external">DNS如何工作？</a></p>
+
+  </section>
+
+  
+
+<section class="post-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'letian'; 
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+  
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>

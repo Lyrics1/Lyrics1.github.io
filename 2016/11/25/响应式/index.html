@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      响应式 | Lyrics 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="ZF">
+    
+    
+
+    <meta name="description" content="弹性图片 img{ max-width:100%};  优点： 可以根据不同的可视宽度动态缩小或放大，可以使用不同的分辨率 缺点： 必须保证图片的大小，小于可视容器的大小；   处理图片缩放的方法   简单的解决方法可以使用百分比，但这样不友好，会放大或者缩小图片。那么可以尝试给图片指定的最大宽度为百分比。假如图片超过了，就缩小。假如图片小了，就原尺寸输出。 img { width: auto;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="响应式 | Lyrics">
+<meta property="og:url" content="https://lyrics1.github.io/2016/11/25/响应式/index.html">
+<meta property="og:site_name" content="Lyrics">
+<meta property="og:description" content="弹性图片 img{ max-width:100%};  优点： 可以根据不同的可视宽度动态缩小或放大，可以使用不同的分辨率 缺点： 必须保证图片的大小，小于可视容器的大小；   处理图片缩放的方法   简单的解决方法可以使用百分比，但这样不友好，会放大或者缩小图片。那么可以尝试给图片指定的最大宽度为百分比。假如图片超过了，就缩小。假如图片小了，就原尺寸输出。 img { width: auto;">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2016-12-10T05:54:55.826Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="响应式 | Lyrics">
+<meta name="twitter:description" content="弹性图片 img{ max-width:100%};  优点： 可以根据不同的可视宽度动态缩小或放大，可以使用不同的分辨率 缺点： 必须保证图片的大小，小于可视容器的大小；   处理图片缩放的方法   简单的解决方法可以使用百分比，但这样不友好，会放大或者缩小图片。那么可以尝试给图片指定的最大宽度为百分比。假如图片超过了，就缩小。假如图片小了，就原尺寸输出。 img { width: auto;">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Lyrics</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          &lt; More and better /&gt;
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+                
+                <li class="navigation__item"><a href="https://github.com/Lyrics1" title="" class="">github</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">响应式</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2016-11-25" class="post-meta__date date">2016-11-25</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h3 id="弹性图片"><a href="#弹性图片" class="headerlink" title="弹性图片"></a>弹性图片</h3><blockquote>
+<p>img{ max-width:100%};</p>
+</blockquote>
+<p>优点： 可以根据不同的可视宽度动态缩小或放大，可以使用不同的分辨率</p>
+<p>缺点： 必须保证图片的大小，小于可视容器的大小；</p>
+<blockquote>
+<ol>
+<li>处理图片缩放的方法</li>
+</ol>
+</blockquote>
+<p>简单的解决方法可以使用百分比，但这样不友好，会放大或者缩小图片。那么可以尝试给图片指定的最大宽度为百分比。假如图片超过了，就缩小。假如图片小了，就原尺寸输出。</p>
+<p>img { width: auto; max-width: 100%; }</p>
+<blockquote>
+<p>用::before和::after伪元素 +content 属性来动态显示一些内容或者做其它很酷的事情，在 CSS3 中，任何元素都可以使用 content 属性了，这个方法就是结合 css3 的 attr 属性和 HTML 自定义属性的功能：</p>
+</blockquote>
+<p> HTML 结构：</p>
+<p> <code>&lt;img src=&quot;image.jpg&quot;
+     data-src-600px=&quot;image-600px.jpg&quot;
+     data-src-800px=&quot;image-800px.jpg&quot;
+     alt=&quot;&quot;&gt;</code></p>
+<p>CSS 控制：</p>
+<p><code>@media (min-device-width:600px) {
+    img[data-src-600px] {
+        content: attr(data-src-600px, url);
+    }
+}</code></p>
+<p><code>@media (min-device-width:800px) {
+    img[data-src-800px] {
+        content: attr(data-src-800px, url);
+    }
+}</code></p>
+<h3 id="标签"><a href="#标签" class="headerlink" title=" 标签"></a><head> 标签</head></h3><p> <code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, minimum-scale=1,user-scalable=no&quot;&gt;</code></p>
+<ol>
+<li><p>width=device-width ；宽度：设备的宽度;</p>
+</li>
+<li><p>initial-scale - 初始的缩放比例</p>
+</li>
+<li><p>minimum-scale - 允许用户缩放到的最小比例</p>
+</li>
+<li><p>maximum-scale - 允许用户缩放到的最大比例</p>
+</li>
+<li><p>user-scalable - 用户是否可以手动缩放 </p>
+</li>
+</ol>
+<h3 id="构造布局模式"><a href="#构造布局模式" class="headerlink" title="构造布局模式"></a>构造布局模式</h3><h4 id="使用-viewport与媒体查询"><a href="#使用-viewport与媒体查询" class="headerlink" title="使用@viewport与媒体查询"></a>使用@viewport与媒体查询</h4><blockquote>
+<p>在不同的条件下写出不一样的css,复写，但是加载条件不一样，适应性强，</p>
+</blockquote>
+<ol>
+<li>不同条件使用不同的样式表</li>
+</ol>
+<p>‘ <link rel="stylesheet" type="text/css" media="screen and (max-device-width: 480px)" href="shetland.css"> ‘’</p>
+<pre><code>当屏幕宽度小于480px 时，加载sherland.css 文件
+</code></pre><ol>
+<li>优化： 可以将媒体查询建立在同一个样式列表里面</li>
+</ol>
+<h5 id="Smartphones-portrait-and-landscape-智能手机-的（纵向和横向）"><a href="#Smartphones-portrait-and-landscape-智能手机-的（纵向和横向）" class="headerlink" title="Smartphones (portrait and landscape)   智能手机 的（纵向和横向）"></a>Smartphones (portrait and landscape)   智能手机 的（纵向和横向）</h5><p> <code>@media only scree and (min-device-width : 320px)  and (max-device-width : 400px) {
+     //styles
+ }</code></p>
+<ol>
+<li><p>Smartphones (landscape) 横向</p>
+<p><code>@media only scree and (min-width : 321px){
+  //styles
+}</code></p>
+</li>
+<li><p>Smartphones(protrait) 纵向</p>
+</li>
+</ol>
+<p><code>@media only scree and(max-wiwdth: 320px){
+    //styles
+}</code></p>
+<h5 id="ipad-端"><a href="#ipad-端" class="headerlink" title="ipad 端"></a>ipad 端</h5><p><code>@media screen and (orientation: landscape){  //横屏
+    .ipadLandscpe{
+    width:30%;
+    float:right;
+    }
+}</code></p>
+<p><code>@media screen and(orientation :portrait){  //竖屏
+    .ipadportrait{
+    clear:both;//清除浮动
+    }
+}</code></p>
+<blockquote>
+<p>兼容ipad 和 iphone 的视图效果</p>
+</blockquote>
+<p> ` /<strong> iPad </strong>/<br>@media only screen and (min-width: 768px) and (max-width: 1024px) {}</p>
+<p>/<strong> iPhone </strong>/<br>@media only screen and (min-width: 320px) and (max-width: 767px) {} `</p>
+<h4 id="学会隐藏内容"><a href="#学会隐藏内容" class="headerlink" title="学会隐藏内容"></a>学会隐藏内容</h4><blockquote>
+<p>display : none;</p>
+</blockquote>
+<ol>
+<li><p>通过JS判断当前硬件屏幕规格  ，如果是小屏幕，则隐藏大块面积的内容，变为链接  (我们可以隐藏掉大块的文字内容区，而只显示一个简单的导航结构，其中的导航元素可以指向详细内容页面。)</p>
+</li>
+<li><p>注意，不要使用visibility: hidden的方式，因为这只能使元素在视觉上不做呈现 ;但是还是占据位置；</p>
+</li>
+</ol>
+<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><ol>
+<li>尽量不要使用绝对宽度 ，和绝对大小 ;例如 px;   使用 百分比 (%)  ;</li>
+</ol>
+<ol>
+<li>字体使用 em 或者 rem(不只是局限于字体，图片、边框宽度都可以使用);em 是相对父级元素的大小确定的,rem相对于根元素；</li>
+</ol>
+<p><a href="https://zellwk.com/blog/media-query-units/" target="_blank" rel="external">em,rem,px在媒体查询中的区别</a>;</p>
+<p><a href="http://www.jianshu.com/p/b37218f0f9c6" target="_blank" rel="external">em,rem,px在css中的区别</a>;</p>
+<p><a href="http://www.jianshu.com/p/e1d5e3ad7865" target="_blank" rel="external">em,rem,px在css中的区别</a>;</p>
+<ol>
+<li><p>流动布局 fluid grid</p>
+<p>“流动布局”的含义是，各个区块的位置都是浮动的，不是固定不变的</p>
+</li>
+</ol>
+
+  </section>
+
+  
+
+<section class="post-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'letian'; 
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+  
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>

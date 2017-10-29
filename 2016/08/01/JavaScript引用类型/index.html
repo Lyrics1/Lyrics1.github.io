@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      JavaScript引用类型 | Lyrics 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="ZF">
+    
+    
+
+    <meta name="description" content="first:引用类型是一种数据结构描述的是一类对象所有的属性和方法 一般访问对象属性都是使用点表示法，但是也可以使用方括号表示法 但是注意的是：使用方括号注意应该将访问的属性一字符串的形式放在括号中 所以如果属性名中包含：导致语法错误的字符和关键字，空格，等都可以使用括号表示法 如果属性名中含有空格，我们将不能使用点表示法，必须使用括号表示法，其他情况下，建议使用点表示法  Object类型 Ar">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript引用类型 | Lyrics">
+<meta property="og:url" content="https://lyrics1.github.io/2016/08/01/JavaScript引用类型/index.html">
+<meta property="og:site_name" content="Lyrics">
+<meta property="og:description" content="first:引用类型是一种数据结构描述的是一类对象所有的属性和方法 一般访问对象属性都是使用点表示法，但是也可以使用方括号表示法 但是注意的是：使用方括号注意应该将访问的属性一字符串的形式放在括号中 所以如果属性名中包含：导致语法错误的字符和关键字，空格，等都可以使用括号表示法 如果属性名中含有空格，我们将不能使用点表示法，必须使用括号表示法，其他情况下，建议使用点表示法  Object类型 Ar">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2016-10-16T08:37:34.285Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript引用类型 | Lyrics">
+<meta name="twitter:description" content="first:引用类型是一种数据结构描述的是一类对象所有的属性和方法 一般访问对象属性都是使用点表示法，但是也可以使用方括号表示法 但是注意的是：使用方括号注意应该将访问的属性一字符串的形式放在括号中 所以如果属性名中包含：导致语法错误的字符和关键字，空格，等都可以使用括号表示法 如果属性名中含有空格，我们将不能使用点表示法，必须使用括号表示法，其他情况下，建议使用点表示法  Object类型 Ar">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Lyrics</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          &lt; More and better /&gt;
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+                
+                <li class="navigation__item"><a href="https://github.com/Lyrics1" title="" class="">github</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">JavaScript引用类型</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2016-08-01" class="post-meta__date date">2016-08-01</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h4 id="first-引用类型是一种数据结构"><a href="#first-引用类型是一种数据结构" class="headerlink" title="first:引用类型是一种数据结构"></a>first:引用类型是一种数据结构</h4><p>描述的是一类对象所有的属性和方法</p>
+<p>一般访问对象属性都是使用点表示法，但是也可以使用方括号表示法</p>
+<p>但是注意的是：使用方括号注意应该将访问的属性一字符串的形式放在括号中</p>
+<p>所以如果属性名中包含：导致语法错误的字符和关键字，空格，等都可以使用括号表示法</p>
+<p>如果属性名中含有空格，我们将不能使用点表示法，必须使用括号表示法，其他情况下，建议使用点表示法</p>
+<ol>
+<li>Object类型</li>
+<li>Array类型  创建数组类型</li>
+</ol>
+<p>javascript 数组和其他语言有点不太一样，他可以存储任何类型的数据，类似于结构体，但是还是有序的，而且数组的长度是动态的，会随着数据的添加自动增长。</p>
+<h5 id="创建数组的基本方式有两种："><a href="#创建数组的基本方式有两种：" class="headerlink" title="创建数组的基本方式有两种："></a>创建数组的基本方式有两种：</h5><ol>
+<li>使用构造函数Array()</li>
+</ol>
+<p>例如：<figure class="highlight plain"><figcaption><span>n</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var n=new Array(20);	 预先知道数组长度</div><div class="line">var n=new Array(&quot;red&quot;,&quot;kll&quot;,&quot;ppp&quot;);   多个数组项用逗号隔开</div></pre></td></tr></table></figure></p>
+<pre><code>而且在使用Array构造函数时可以不使用（省略）new操作符
+</code></pre><p>访问：如果方括号中的索引小于数组项数，则会得到相应的值，但是如果超出数组就会自动增加到这一项+1；类型就为undefined</p>
+<p>数组的长度可以根据属性：length来获取</p>
+<h5 id="检测数组：检查看是不是数组"><a href="#检测数组：检查看是不是数组" class="headerlink" title="检测数组：检查看是不是数组"></a>检测数组：检查看是不是数组</h5><ol>
+<li><p>使用instanceof操作符  （鉴于只有一个全局环境） 确定某个（对象）是不是数组</p>
+<p>所以有Array.isArray()的方法  确定某个（值）是不是数组</p>
+<p>使用if语句判断</p>
+<h5 id="类型转换：toString-转换为字符串，数组的话，转换为以逗号分隔的字符串"><a href="#类型转换：toString-转换为字符串，数组的话，转换为以逗号分隔的字符串" class="headerlink" title="类型转换：toString()转换为字符串，数组的话，转换为以逗号分隔的字符串"></a>类型转换：toString()转换为字符串，数组的话，转换为以逗号分隔的字符串</h5><p>调用value()返回的还是数组</p>
+<p>注意：如果使用alert().必须知道他本身要接受字符串参数，所以会在后台调用toString(),所以会和显示调用toString(),的效果一样</p>
+<p>数组继承的toLocalString(),toString(),value()</p>
+<p>默认都是以逗号分隔，但是使用join()可以使用不同的得分隔符，只接受一个参数，就是分隔符</p>
+<p>使用方法:Object.join(分隔符)；<br>如果数组的某一项是NUll或undefined,那么在这几种方法中，返回的结果都是空字符串</p>
+</li>
+</ol>
+<h5 id="栈方法："><a href="#栈方法：" class="headerlink" title="栈方法："></a>栈方法：</h5><pre><code> 1. 栈：限制插入和删除的数据结构（栈是一种后进先出的数据结构）最先添加，最早删除
+
+2. 栈的插入（推入）和移除（弹出），只发生在一个位置---栈的顶部
+
+3.  方法：push() 推入 
+
+  接受任意数量的参数，逐个添加至数组末尾，返回数组长度
+
+5.  pop()弹出
+移除数组末尾的最后一项，返回移除的项；
+
+var n=Array([&apos;1&apos;,&apos;2&apos;,&apos;3&apos;,&apos;4&apos;]);
+var N=n.push(&apos;6&apos;);   返回：5
+var N=n.pop(&apos;1&apos;) ;   返回：1（被移除的项)
+</code></pre><h5 id="队列方法"><a href="#队列方法" class="headerlink" title="队列方法"></a>队列方法</h5><ol>
+<li><p>队列数据结构是先进先出，从末尾添加(（push())，前端删除(shift())；</p>
+</li>
+<li><p>移除：shift（）移除第一项   返回移除项</p>
+<p>   unshift()可以再前端添加数组；push（）后端添加，pop()后端删除</p>
+<ol>
+<li><p>重排序方法：</p>
+<pre><code>reverse()，反转,逆置；
+
+sort()升序；但是他本身调用的是toStrng()得到的是字符串，所以,也是按照字符的方式比较，所以需要给定相应的比较方法；
+
+通过参数，可以接受一个函数，函数体是比较规则；，就是自己写一个函数，函数体是比较规则，然后将这个函数作为sort()
+
+的参数，从而得到自己想要的结果
+</code></pre></li>
+</ol>
+</li>
+<li><p>操作方法：</p>
+<pre><code>1：concat(),可以基于一个数组，创建一个新的数组；
+
+ 先是复制已经存在的数组，然后参数是新的数组所要添加的元素，参数可以是单个元素，也可以是一个数组；
+
+ 都会添加到末尾；但是这个方法不会影响原始数组
+
+ 2：slice()，参数一个：返回参数到数组结尾的元素所构成的数组；
+
+ 参数：；两个，返回第一个参数至第二个参数之间的元素，注意但是不包括结束项，【   ）,左闭右开；
+
+ ，但是这个方法不会影响原始数组，
+
+ 如果slice()参数有一个负数，则用数组长度加上该数，确定相应位置，如果结束位置小于开始位置，则返回空数组；
+
+ 3：splice(),主要是向数组中部插入项，
+
+ 删除，参数2个【起始位置，结束位置），例如：splice(0,2) 删除0,1；数组前两项
+
+插入，参数3个，（插入的位置，0，插入元素）
+
+替换，参数3个，（起始位置，删除项的个数，替补的元素），注意替补的元素的个数不限；
+</code></pre></li>
+<li><p>位置方法：</p>
+<pre><code>indexOf(),参数2个，查找的项和查找的起点位置，从数组前面开始
+
+lastindexOf(),参数2个，从数组后面开始
+
+找到 返回所找元素的位置，否则返回-1;,查找使用全等（===），所以类型也很严格；
+</code></pre></li>
+<li><p>迭代方法：5个，参数2个</p>
+<pre><code>every()对一项都给定函数  ‘每’  一项返回true,则为true;  &amp;&amp;
+
+filter(),对一项都给定函数返回项数是true的组成的数组；
+
+forEach()对一项都给定函数，但是没返回值
+
+map()返回每次调用结果组成的数组；
+
+some()对一项都给定函数  ‘任意’ 一项返回true,则为true;  ||
+
+some()和every()区别：
+
+every(),传入的函数必须对每一项都返回true;
+
+some(),只要传入的函数对数组中的某一项返回true,就会返回true
+</code></pre></li>
+<li><p>归并方法：reduce() 正向,reduceRight()  逆向;</p>
+</li>
+</ol>
+
+  </section>
+
+  
+
+<section class="post-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'letian'; 
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+  
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      view | Lyrics 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="ZF">
+    
+    
+
+    <meta name="description" content="面试总结绿盟科技变量存储，堆栈，怎么存储的for 循环几种方式内存回收vue的数据双向绑定，怎么判定绑定的for的一道题httpswebpack的loader怎么配置webpack的单文件组件为什么不用gulp服务器用过哪些博客都是自己搭的吗es6用过哪些restful apivue的优点你对前端的理解get post delete put 美团 一面 什么都问 css hack 深度优先,广度优">
+<meta property="og:type" content="article">
+<meta property="og:title" content="view | Lyrics">
+<meta property="og:url" content="https://lyrics1.github.io/2017/06/06/view/index.html">
+<meta property="og:site_name" content="Lyrics">
+<meta property="og:description" content="面试总结绿盟科技变量存储，堆栈，怎么存储的for 循环几种方式内存回收vue的数据双向绑定，怎么判定绑定的for的一道题httpswebpack的loader怎么配置webpack的单文件组件为什么不用gulp服务器用过哪些博客都是自己搭的吗es6用过哪些restful apivue的优点你对前端的理解get post delete put 美团 一面 什么都问 css hack 深度优先,广度优">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-06-06T03:46:44.075Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="view | Lyrics">
+<meta name="twitter:description" content="面试总结绿盟科技变量存储，堆栈，怎么存储的for 循环几种方式内存回收vue的数据双向绑定，怎么判定绑定的for的一道题httpswebpack的loader怎么配置webpack的单文件组件为什么不用gulp服务器用过哪些博客都是自己搭的吗es6用过哪些restful apivue的优点你对前端的理解get post delete put 美团 一面 什么都问 css hack 深度优先,广度优">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Lyrics</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          &lt; More and better /&gt;
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+                
+                <li class="navigation__item"><a href="https://github.com/Lyrics1" title="" class="">github</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">view</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2017-06-06" class="post-meta__date date">2017-06-06</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h2 id="面试总结"><a href="#面试总结" class="headerlink" title="面试总结"></a>面试总结</h2><h4 id="绿盟科技"><a href="#绿盟科技" class="headerlink" title="绿盟科技"></a>绿盟科技</h4><p>变量存储，堆栈，怎么存储的<br>for 循环几种方式<br>内存回收<br>vue的数据双向绑定，怎么判定绑定的<br>for的一道题<br>https<br>webpack的loader怎么配置<br>webpack的单文件组件<br>为什么不用gulp<br>服务器用过哪些<br>博客都是自己搭的吗<br>es6用过哪些<br>restful api<br>vue的优点<br>你对前端的理解<br>get post delete put</p>
+<h4 id="美团-一面"><a href="#美团-一面" class="headerlink" title="美团 一面"></a>美团 一面</h4><ol>
+<li>什么都问</li>
+<li>css hack</li>
+<li>深度优先,广度优先,遍历的应用</li>
+<li>http头部</li>
+<li>cookie 和 session 相关, 出现过什么问题, 项目里面cookie是怎么用的</li>
+<li>项目改进</li>
+<li>实战编程</li>
+<li>实习三个月</li>
+<li>instanceof</li>
+<li>状态码</li>
+<li>平时是使用float多还是, 绝对定位多</li>
+</ol>
+<p><strong>css hack</strong></p>
+<ul>
+<li>IE 条件注释法<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;!--[if lt IE 9]&gt;</div><div class="line">	&lt;script src=&quot;assets/js/html5shiv.js&quot;&gt;&lt;/script&gt;</div><div class="line">	&lt;script src=&quot;assets/js/respond.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;![endif]--&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>cookie 和 session</strong><br>set-cookie中包含的值:<br>NAME=VALUE    赋予 Cookie 的名称和其值（必须项）<br>expires=DATE    Cookie 的有效期（若不明确指定则默认为浏览器关闭前为止）<br>path=PATH    将服务器上的文件目录作为 Cookie 的适用对象（若不指定则默认为文档所在的目录）<br>domain=域名    作为 Cookie 适用对象的域名（若不指定则默认为创建 Cookie 的服务器的域名）<br>Secure    仅在 HTTPS 安全通信时才会发送 Cookie<br>HttpOnly    加以限制，使 Cookie 不能被 Javascript 脚本访问</p>
+<p><strong>优雅降级</strong><br>gulp里面的autorefixer</p>
+<h4 id="腾讯"><a href="#腾讯" class="headerlink" title="腾讯"></a>腾讯</h4><ol>
+<li>websocket 的 向下兼容的问题</li>
+<li>DOMContentLoaded 和 load 区别</li>
+<li>es6数组方法使用过什么</li>
+<li>用什么方法可以得到css属性</li>
+<li>promise.all 回调</li>
+<li>localstorage 爆栈 怎么处理 还有 和cookie的区别</li>
+<li>indexedDB 和 loaclStorage 区别</li>
+<li>DOM操作的方法</li>
+<li>style 和 cssclass 性能问题</li>
+<li>获取元素CSS值方法 <a href="http://www.zhangxinxu.com/wordpress/2012/05/getcomputedstyle-js-getpropertyvalue-currentstyle/" target="_blank" rel="external">获取元素CSS值之getComputedStyle方法熟悉</a></li>
+<li>数组方法, slice方法, splice方法</li>
+<li>css更改样式属性,多种方法</li>
+<li>异步的方法</li>
+<li>koa相关</li>
+<li>第二个项目 nodejs出现过什么错误</li>
+<li>一上来就是 nodejs 守护进程</li>
+<li>怎么解决nodejs方面出现的问题</li>
+<li>怎么让浏览器不缓存(请求的时候参数不一样….我说的是cache-control=nocache)</li>
+<li>使用cookie的时候出现过什么问题</li>
+<li>ajax中设置跨域, CORS中客户端需要设置什么,除了origin,还有一个什么..</li>
+<li>ajax中的readyState 0-4 都代表什么</li>
+<li>如果服务器端返回的是503,ajax怎么获取是503</li>
+<li>null 和 undefined 的区别</li>
+<li>typeof null 返回什么</li>
+<li>怎么去判断对象是否有这个属性, a[b]不对, 用hasOwnPropotype</li>
+<li>事件机制, 事件代理, 怎么阻止冒泡</li>
+<li>怎么去改变一个css样式, 我说的去获取一个样式表</li>
+<li>generator ES6</li>
+<li>状态码:301和302的区别,为什么一个是永久,一个是临时.403 </li>
+<li>按需加载,,然后我说webpack code-splitting</li>
+<li>项目啊,问项目了!!!!</li>
+<li>mysql连接数上限</li>
+</ol>
+<p><strong>css更改样式属性,多种方法</strong><br>style</p>
+<p>className</p>
+<p>cssText</p>
+<h4 id="美团"><a href="#美团" class="headerlink" title="美团"></a>美团</h4><ol>
+<li>跨域, 然后我自己挖坑说到websocket, 然后他问降级方法, 说到comet,然后简单说了一下,不会了,然后聊websocket,问怎么维护一个多用户的用户列表</li>
+<li>url字符串的截取, 去后面的参数,保存到对象.</li>
+<li>安全方式 xss过滤, 你都过滤了什么</li>
+<li>MVC 和 MVVM</li>
+<li>bind实现, 还有什么其他用处</li>
+<li>cookie 跨域</li>
+<li>异步, generator async/awaite</li>
+<li>项目相关</li>
+</ol>
+<h4 id="腾讯-1"><a href="#腾讯-1" class="headerlink" title="腾讯"></a>腾讯</h4><ol>
+<li>jsonp 安全性问题</li>
+<li>trim 实现, 去空格</li>
+<li>字符串方法, 数组方法</li>
+<li>vue 数据绑定原理</li>
+<li>this四个场景</li>
+<li>闭包在项目中的引用, 内存溢出怎么处理的</li>
+<li>apply 和 call</li>
+<li>有没有阅读过vue源码</li>
+<li>本地缓存</li>
+<li>http缓存机制</li>
+<li>url输入之后到渲染一系列变化</li>
+<li>事件的代理</li>
+<li>ajax跨域, 遇到的一些问题, cors, jsonp</li>
+<li>post 和 get 区别</li>
+<li>数组里面每个下标所对应的值都是原来的两倍, 不用数组遍历的api, 怎么实现</li>
+</ol>
+<p><strong>字符串方法</strong></p>
+<p>concat() 连接字符串<br>replace() 利用正则替换<br>toLowerCase() 转换为小写<br>toUpperCase() 转化为大写<br>split() 分割字符串<br>substr()    从起始索引号提取字符串中指定数目的字符。<br>substring()    提取字符串中两个指定的索引号之间的字符。<br>indexof() 检索字符串</p>
+<p><strong>trim实现</strong><br>. 除了换行符以外的任意字符<br>\w 字母 数字 下划线 汉字<br>\s 任意空白符<br>\d 数字<br>\b 单词开始或结尾<br>[^x] 出去x以外的任意字符<br>^ 字符串开始<br>$ 字符串结尾</p>
+<ul>
+<li>重复0次或多次</li>
+</ul>
+<ul>
+<li>一次或更多次<br>? 零次或一次<br>{n} n次<br>{n,} n次或更多次<br>{n,m} 重复 n ~ m 次<br>*?    重复任意次，但尽可能少重复<br>+?    重复1次或更多次，但尽可能少重复<br>??    重复0次或1次，但尽可能少重复<br>去除前后的空格: </li>
+</ul>
+<ol>
+<li>string.replace(/^\s+/, “”).replace(/\s+$/, “”);</li>
+<li>string.replace(/^\s+(.*?)\s+$/, “$1”)<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&apos;  this is my shite &apos;.replace(/\s*(\b\w+\b)\s*/g, &quot;$1&quot;)</div><div class="line">&quot;thisismyshite&quot;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>稀疏数组</strong><br>for(var index in array)去遍历<br>不要使用for </p>
+<p>forEach也一样, map不会遍历那些没被赋过值, 或者delete删除的索引</p>
+<h4 id="腾讯-2"><a href="#腾讯-2" class="headerlink" title="腾讯"></a>腾讯</h4><p>问题:</p>
+<ol>
+<li>跨域都有哪些</li>
+<li>闭包</li>
+<li>URL输入之后,都发生了什么</li>
+<li>数组去重(13亿个数,然后辅助空间内存有限制)</li>
+<li>二叉树的遍历</li>
+<li>单例模式</li>
+<li>css3新特性</li>
+</ol>
+<h4 id="腾讯-3"><a href="#腾讯-3" class="headerlink" title="腾讯"></a>腾讯</h4><p>问题:</p>
+<ol>
+<li>冒泡排序算法(手写)</li>
+<li>求二叉树的深度(手写)</li>
+<li>有n-1个数,为[1~n-1],现在找出里面少了哪个数(思路)</li>
+<li>堆排序(思路)</li>
+<li>tcp滑动窗口</li>
+<li>js文件的性能优化</li>
+<li>解决浏览器兼容性问题</li>
+<li>服务器端渲染和客户端渲染</li>
+</ol>
+<p><strong>tcp滑动窗口</strong><br>tcp滑动窗口主要有两个作用, 一个是提供TCP的可靠性, 二是提供TCP的流控特性</p>
+<p>原理:</p>
+<ol>
+<li>对于TCP的发送方,任何在发送缓存中的数据都可以分为4类,”已发送并得到对端的ACK”,”已发送未得到对端的ACK”,”未发送但对端的ACK允许发送”,”未发送但对端的ACK不允许发送”</li>
+</ol>
+<p>其中”已发送并未得到对端的ACK”和”未发送但对端允许发送”这两个是需要ACK确认请求的,这两个就组成了一个滑动窗口</p>
+<hr>
+<h2 id="1-2-3-4"><a href="#1-2-3-4" class="headerlink" title="1 |2 3 |4"></a>1 |2 3 |4</h2><ol>
+<li>在TCP的接收方,它的接受缓存内存有3种,”已接收”,”未接收准备接收”,”未接收并未准备接收”</li>
+</ol>
+<p>“未接收并准备接收” 是需要发送方发送消息的,所以被称为接受窗口</p>
+<p>发送窗口取决于接受窗口大小,接受窗口大小取决于本段应用,系统,硬件的限制</p>
+<hr>
+<h2 id="1-2-3"><a href="#1-2-3" class="headerlink" title="1| 2| 3"></a>1| 2| 3</h2><ol>
+<li>发送窗口只有接收到对端对于本段发送窗口的ACK确认,才会移动发送窗口左边界,接收窗口只会在前面所有段都确认的情况下才会移动左边界.<br>前面还有字段未接收但收到后面字段的情况下,窗口是不会移动的,并不会对于后续字节确认,确保端会对这些数据重传</li>
+</ol>
+<p>tcp滑动窗口根据自己的处理能力变化,通过本端TCP接收窗口大小来控制发送窗口的流量限制</p>
+<h1 id="面经"><a href="#面经" class="headerlink" title="面经"></a>面经</h1><p>[TOC]</p>
+<hr>
+<h4 id="手写jsonp的实现"><a href="#手写jsonp的实现" class="headerlink" title="手写jsonp的实现"></a>手写jsonp的实现</h4><ol>
+<li>(默认情况下)浏览器的同源策略把跨域请求都禁止了</li>
+<li>HTML的<code>&lt;script&gt;</code>是例外(其实还有iframe,img)都可以突破同源策略</li>
+<li>通过将前端给定的回调函数名作为参数传给后端,然后直接返回已经带有参数的函数调用(字符串,eval或者JSON.parse解析)</li>
+</ol>
+<h4 id="http请求头，请求体，cookie在哪个里面？url在哪里面？"><a href="#http请求头，请求体，cookie在哪个里面？url在哪里面？" class="headerlink" title="http请求头，请求体，cookie在哪个里面？url在哪里面？"></a>http请求头，请求体，cookie在哪个里面？url在哪里面？</h4><p>cookie在请求头,url也在请求头<br>cache-control:no-cache不管怎么样都向服务器请求一次,查看资源是否已经被更改<br>cache-control:no-store禁止浏览器和所有的代理服务器缓存任何的响应,所以每次请求资源都会下载完整的响应</p>
+<h4 id="垂直居中-多行文本垂直居中"><a href="#垂直居中-多行文本垂直居中" class="headerlink" title="垂直居中,多行文本垂直居中"></a>垂直居中,多行文本垂直居中</h4><p>CSS 的属性 vertical-align 用来指定行内元素（inline）或表格单元格（table-cell）元素的垂直对齐方式。</p>
+<p>如果是单行文本垂直居中,只要设置height和line-height相等即可</p>
+<p>多行文本父元素不是固定宽度的:可以设置上下一样的padding把父元素撑起来.<br>多行文本父元素是固定宽度的:可以设置父元素为 display:table,子元素<br>display:table-cell,这样就可以使用vertical-align了</p>
+<h4 id="原型链的解释"><a href="#原型链的解释" class="headerlink" title="原型链的解释"></a>原型链的解释</h4><p>函数对象有prototype.不同对象有<code>__proto__</code><br>内置属性:<br><code>prototype</code>:prototype所指向的空间来存储要共享的属性和方法<br><code>__proto__</code>:指向创建它的函数对象原型prototype<br><code>constructor</code>:原型对象中constructor属性指向的就是这个构造函数</p>
+<p>对象的<strong>proto</strong>指向自己构造函数的prototype。obj.<strong>proto</strong>.<strong>proto</strong>…的原型链由此产生，包括我们的操作符instanceof正是通过探测obj.<strong>proto</strong>.<strong>proto</strong>… === Constructor.prototype来验证obj是否是Constructor的实例。</p>
+<p>instanceof运算符检测某个构造函数的prototype属性指向的对象是否存在于另外一个对象原型链上.</p>
+<p>hasOwnProperty 是 JavaScript 中唯一一个只涉及对象自身属性而不会遍历原型链的方法。</p>
+<h4 id="对闭包的理解-get-set闭包实现"><a href="#对闭包的理解-get-set闭包实现" class="headerlink" title="对闭包的理解,get,set闭包实现"></a>对闭包的理解,get,set闭包实现</h4><ol>
+<li>保护函数内部变量的安全:如迭代器,生成器</li>
+<li>在内存中维持变量:如缓存数据,柯里化</li>
+</ol>
+<p>当一个函数中使用了其他作用域中的变量, 它就是一个闭包. 闭包能够”记住”其创建时所在的环境,能访问其他作用域中变量.</p>
+<p>闭包是通过作用域链来记住当前的执行环境的</p>
+<p>创建一个函数时, 这个函数的[[Scope]]下会保存创建时的作用域链, 由于这个作用域链会引用当前活动对象(或者一个Contex), 这就导致了这些对象的内存不能够被回收</p>
+<p>避免内存泄漏,就是在退出函数之前把不使用变量都删除</p>
+<h4 id="null-undefined"><a href="#null-undefined" class="headerlink" title="null == undefined ?"></a>null == undefined ?</h4><p>null == undefined<br>true</p>
+<h4 id="基本的数据类型"><a href="#基本的数据类型" class="headerlink" title="基本的数据类型"></a>基本的数据类型</h4><p>基本数据类型:布尔值,Number,String,<br>复合数据类型:Array,Object<br>特殊数据类型:Null(空对象),Undefined(未定义)</p>
+<h4 id="基本的两列自适应布局"><a href="#基本的两列自适应布局" class="headerlink" title="基本的两列自适应布局"></a>基本的两列自适应布局</h4><p>左定宽,右自适应:</p>
+<ol>
+<li><p>float + margin</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;style&gt;</div><div class="line">p&#123;margin: 0;&#125;</div><div class="line">.parent&#123;overflow: hidden;zoom: 1;&#125;</div><div class="line">.left&#123;position: relative;float: left;width: 100px;&#125;    </div><div class="line">.rightWrap&#123;float: left;width: 100%;margin-left: -100px;&#125;</div><div class="line">.right&#123;margin-left: 120px;&#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>calc()</p>
+</li>
+<li>float + margin<br>使用overflow属性来触发bfc，来阻止浮动造成的文字环绕效果。</li>
+<li>absolute,left和right布局 但缺点就是不能做到“不定宽”，因为.left和.right的left属性的值高度相关。</li>
+<li>table布局</li>
+<li>flex布局</li>
+</ol>
+<h4 id="OSI模型，HTTP-TCP-UDP分别在哪些层"><a href="#OSI模型，HTTP-TCP-UDP分别在哪些层" class="headerlink" title="OSI模型，HTTP,TCP,UDP分别在哪些层"></a>OSI模型，HTTP,TCP,UDP分别在哪些层</h4><p>应用层 HTTP<br>传输层 提供端对端的接口 TCP，UDP</p>
+<p>tcp/ip模型:<br>应用层<br>网络层<br>传输层<br>数据链路层<br>物理层</p>
+<h4 id="网站性能优化"><a href="#网站性能优化" class="headerlink" title="网站性能优化"></a>网站性能优化</h4><p><strong>请求数量</strong><br>合并脚本和样式表<br>Data URL<br>css sprites<br>拆分初始化负载<br>划分主域<br><strong>请求带宽</strong><br>开启Gzip<br>精简JavaScript<br>压缩图片 Inline SVG, srcset, css3,IconFont, webP<br><strong>缓存利用</strong><br>使用CDN<br>使用外部js和css<br>添加Expires(cache-control)<br>添加ETag试题标签<br><strong>代码校验以及页面结构</strong><br>样式表置顶,js置底<br>按需加载<br>避免css表达式<br>避免空src<br>缓存DOM<br>使用事件代理,不用事件绑定<br>使用ID</p>
+<h4 id="前端路由和后端路由"><a href="#前端路由和后端路由" class="headerlink" title="前端路由和后端路由"></a>前端路由和后端路由</h4><p>后端路由:每次跳转到不同的url,然后重新访问服务器,获取页面<br>前端路由:跳转到不同的url,都是前端使用的锚点路由,js根据url不同操作dom   vue history.pushState</p>
+<h4 id="介绍一下webpack和gulp"><a href="#介绍一下webpack和gulp" class="headerlink" title="介绍一下webpack和gulp"></a>介绍一下webpack和gulp</h4><p>而各种检查,各种预处理就应该交给gulp之流了,Gulp / Grunt 是一种工具，能够优化前端工作流程。比如自动刷新页面、combo、压缩css、js、编译less等等。</p>
+<p>就如前面所说,webpack只是一个模块打包器,所以,交予webpack处理的应该已是经过各种lint检查,各种编译处理的代码</p>
+<h4 id="前后端分离的意义以及对前端工程化的理解"><a href="#前后端分离的意义以及对前端工程化的理解" class="headerlink" title="前后端分离的意义以及对前端工程化的理解"></a>前后端分离的意义以及对前端工程化的理解</h4><h4 id="Restful-Api"><a href="#Restful-Api" class="headerlink" title="Restful Api"></a>Restful Api</h4><p>(1)每一个URI代表一种资源；<br>（2）客户端和服务器之间，传递这种资源的某种表现层；<br>（3）客户端通过四个HTTP动词，对服务器端资源进行操作，实现”表现层状态转化”。</p>
+<h4 id="有几种方式可以判断数据类型？"><a href="#有几种方式可以判断数据类型？" class="headerlink" title="有几种方式可以判断数据类型？"></a>有几种方式可以判断数据类型？</h4><ol>
+<li>typeof</li>
+<li>判断已知对象类型的方法： instanceof</li>
+<li>根据对象的constructor判断： constructor</li>
+</ol>
+<h4 id="ajax"><a href="#ajax" class="headerlink" title="ajax"></a>ajax</h4><p>初始化,open,send,onreadystatechange,</p>
+<p>responseText和responseXML得到date</p>
+<h4 id="事件机制"><a href="#事件机制" class="headerlink" title="事件机制"></a>事件机制</h4><p>事件委托<br>e.target来定位到当前点击的button。</p>
+<h4 id="websocket-原理和使用场景"><a href="#websocket-原理和使用场景" class="headerlink" title="websocket 原理和使用场景"></a>websocket 原理和使用场景</h4><p>原理:都属于应用层协议,基于TCP,HTML5提供了一些API,websocket利用http来建立连接,建立之后就与http无关了,双向实时通讯<br>场景:社交聊天、弹幕、多玩家游戏、协同编辑</p>
+<h4 id="前端路由实现原理"><a href="#前端路由实现原理" class="headerlink" title="前端路由实现原理"></a>前端路由实现原理</h4><p>方法一:<br>history.pushState 和 history.replaceState<br>方法二:<br>hash也就是锚点, 需要一个hashcahnge函数</p>
+<h4 id="ES6有什么特性-promise实现原理"><a href="#ES6有什么特性-promise实现原理" class="headerlink" title="ES6有什么特性,promise实现原理"></a>ES6有什么特性,promise实现原理</h4><ol>
+<li>箭头函数</li>
+<li>let</li>
+<li>Proxy</li>
+<li>解构赋值</li>
+<li>尾递归优化</li>
+<li>模板字符串</li>
+<li>类</li>
+<li>Promise</li>
+<li></li>
+</ol>
+<p><strong>promise实现原理</strong>:<br>有三种状态:等待(pending),已成功(fulfilled),已拒绝(rejected)<br>只能从等待转换到fulfilled或者rejected,不存在其他的转化路径<br>promise必须实现then方法,而且then方法必须返回一个promise,然后回调函数的执行顺序就是promise被定义的执行顺序<br>then有两个参数,一个是成功(reslove)的回调函数,一个是失败(rejected)的回调函数</p>
+<h4 id="手写after方式清除浮动-一个冒号和两个冒号的区别"><a href="#手写after方式清除浮动-一个冒号和两个冒号的区别" class="headerlink" title="手写after方式清除浮动,一个冒号和两个冒号的区别"></a>手写after方式清除浮动,一个冒号和两个冒号的区别</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">::after&#123;</div><div class="line">	content: &quot;&quot;;</div><div class="line">	display: table;</div><div class="line">	clear: both;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>一个冒号是伪类,两个冒号是伪元素</p>
+<h4 id="nth-child-n-和-nth-type-n-区别"><a href="#nth-child-n-和-nth-type-n-区别" class="headerlink" title="nth-child(n) 和 nth-type(n)区别"></a>nth-child(n) 和 nth-type(n)区别</h4><p>li:nth-child(n) 父元素的第n个子元素,而且这个子元素是li<br>li:nth-type(n) 父元素第n个li元素</p>
+<h4 id="函数声明有哪几种形式，function-aaa-和var-aaa-function-有什么区别"><a href="#函数声明有哪几种形式，function-aaa-和var-aaa-function-有什么区别" class="headerlink" title="函数声明有哪几种形式，function aaa(){} 和var aaa= function(){}有什么区别"></a>函数声明有哪几种形式，function aaa(){} 和var aaa= function(){}有什么区别</h4><ol>
+<li>函数声明</li>
+<li>函数表达式</li>
+<li>new Function()</li>
+</ol>
+<p>函数声明和函数表达式的区别:函数声明会提前,但是函数表达式只会提前函数声明,函数的初始化代码还是在原来的位置</p>
+<h4 id="跨域的实现方法"><a href="#跨域的实现方法" class="headerlink" title="跨域的实现方法"></a>跨域的实现方法</h4><ol>
+<li>jsonp jsonp只能发送get请求 </li>
+<li>document.domain来跨子域</li>
+<li>window.name</li>
+<li>window.postMessage</li>
+<li>CORS cors会忽略cookie</li>
+<li>服务器跨域  服务器跨域需要另起服务器</li>
+</ol>
+<h4 id="src和href的区别"><a href="#src和href的区别" class="headerlink" title="src和href的区别"></a>src和href的区别</h4><p>href:并行下载该文档，并且不会停止对当前文档的处理。这也是建议使用link，而不采用@import加载css的原因。<br>src:当浏览器解析到该元素时，会暂停浏览器的渲染，知道该资源加载完毕。这也是将js脚本放在底部而不是头部得原因。</p>
+<h4 id="CSS-link-import区别"><a href="#CSS-link-import区别" class="headerlink" title="CSS link/import区别"></a>CSS link/import区别</h4><p>(1) link属于HTML标签，而@import是CSS提供的;<br>(2) 页面被加载的时，link会同时被加载，而@import引用的CSS会等到页面被加载完再加载;<br>(3) import只在IE5以上才能识别，而link是HTML标签，无兼容问题;<br>(4) link方式的样式的权重 高于@import的权重.</p>
+<h4 id="事件代理"><a href="#事件代理" class="headerlink" title="事件代理"></a>事件代理</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">document.getElementById(&quot;parentlist&quot;).addEventListener(&quot;click&quot;,function(e) &#123; </div><div class="line">// 检查事件源e.targe是否为Li </div><div class="line">if(e.target &amp;&amp; e.target.nodeName.toUpperCase() == &quot;LI&quot;) &#123; </div><div class="line">	// 真正的处理过程在这里 //</div><div class="line">	alert(123); </div><div class="line">	console.log(&quot;List item &quot;,e.target.id,&quot; was clicked!&quot;);</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h4 id="你认为什么是前端"><a href="#你认为什么是前端" class="headerlink" title="你认为什么是前端"></a>你认为什么是前端</h4><p><a href="https://github.com/fouber/blog/issues/10" target="_blank" rel="external">前端工程–基础篇</a><br>为了提升其前端开发效率和运行性能<br>库/框架选型<br>简单构建优化<br>JS/CSS模块化开发<br>组件化开发与资源管理</p>
+<h4 id="怎么阻止冒泡-怎么阻止默认事件"><a href="#怎么阻止冒泡-怎么阻止默认事件" class="headerlink" title="怎么阻止冒泡,怎么阻止默认事件"></a>怎么阻止冒泡,怎么阻止默认事件</h4><p>阻止冒泡: e.stopPropagation()<br>阻止默认事件: e.preventDefault(), return false</p>
+<h4 id="HTTP2-0"><a href="#HTTP2-0" class="headerlink" title="HTTP2.0"></a>HTTP2.0</h4><p>改进传输性能,实现低延迟和高吞吐量</p>
+<ol>
+<li>二进制分帧层,是在应用层和传输层之间加了一层,会将所有传输的信息</li>
+<li>分割为更小的消息和帧,并用二进制方式编码(首部-&gt;Header帧,request body -&gt; Data帧)</li>
+<li>首部压缩,，对于相同的数据，不再通过每次请求和响应发送首部表<br>所有请求都在一个TCP链接上</li>
+<li>并行双向字节流的请求和响应</li>
+<li>服务器推送</li>
+</ol>
+<h4 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h4><p>200: ok 正常请求,返回相应内容<br>204: No Content 没有新文档,继续使用原来的文档<br>301: 永久重定向 Location首部包含资源现在的URI<br>302: 临时重定向 Location<br>303: 临时重定向 但是post变为get Location<br>400: 存在语法错误<br>401: 未认证<br>403: 请求被拒绝,权限受限<br>404: Not Found 资源未找到<br>500: 表示服务器在执行请求时候,发生错误<br>503: 服务器暂时处于超负荷或停机维护,无法处理请求</p>
+<h4 id="HTML5"><a href="#HTML5" class="headerlink" title="HTML5"></a>HTML5</h4><ol>
+<li>语义化标签</li>
+<li>音频视频API</li>
+<li>Canvas</li>
+<li>地理API</li>
+<li>LocalStorage</li>
+<li>SessionStorage</li>
+<li>表单控件</li>
+<li>inline SVG</li>
+<li>web worker</li>
+</ol>
+<h4 id="CSS3"><a href="#CSS3" class="headerlink" title="CSS3"></a>CSS3</h4><ol>
+<li>圆角</li>
+<li>阴影</li>
+<li>渐变</li>
+<li>旋转(rotate), 缩放(scale), 定位(translate), 倾斜(skew)</li>
+<li>高级选择器</li>
+<li>WebFont</li>
+<li>媒体查询</li>
+<li>新增伪类</li>
+</ol>
+<h4 id="http-请求方法"><a href="#http-请求方法" class="headerlink" title="http 请求方法"></a>http 请求方法</h4><p>head: 和get一样只是,没有相应主体</p>
+<p>get: 获取资源</p>
+<p>put : PUT请求是向服务器端发送数据的，从而改变信息，该请求就像数据库的update操作一样，用来修改数据的内容，但是不会增加数据的种类等，也就是说无论进行多少次PUT操作，其结果并没有不同。</p>
+<p>post : POST请求同PUT请求类似，都是向服务器端发送数据的，但是该请求会改变数据的种类等资源，就像数据库的insert操作一样，会创建新的内容。几乎目前所有的提交操作都是用POST请求的。</p>
+<p>DELETE: 删除资源</p>
+<p>OPTIONS: 返回服务器支持的所有的HTTP请求方法</p>
+<p>TRACE: 回显其收到的请求信息, HTTP请求的测试</p>
+<p>PATCH: put是资源的整体更新,patch是部分更新</p>
+<h4 id="el-nth-child-n-和-el-nth-of-type-n"><a href="#el-nth-child-n-和-el-nth-of-type-n" class="headerlink" title="el:nth-child(n) 和 el:nth-of-type(n)"></a>el:nth-child(n) 和 el:nth-of-type(n)</h4><p>elem:nth-of-type(n)是“选择父元素下第n个elem元素”。</p>
+<p>而elem:nth-child(n)是“这个伪类选中父元素下的第n个子元素，并且个子元素的标签名为elem”。</p>
+<h4 id="判断数据类型"><a href="#判断数据类型" class="headerlink" title="判断数据类型"></a>判断数据类型</h4><p>typeof<br>instanceof<br>constructor<br>Object.prototype.toString.call(value)</p>
+<h4 id="let-和-var"><a href="#let-和-var" class="headerlink" title="let 和 var"></a>let 和 var</h4><p>没有变量提升<br>块级作用域<br>不能重复声明<br>const 常量</p>
+<h4 id="函数式编程"><a href="#函数式编程" class="headerlink" title="函数式编程"></a>函数式编程</h4><ol>
+<li>函数是”第一等公民”</li>
+<li>只用”表达式”，不用”语句”</li>
+<li>没有”副作用”</li>
+<li>不修改状态</li>
+<li>引用透明</li>
+</ol>
+<h4 id="箭头函数-和-普通函数"><a href="#箭头函数-和-普通函数" class="headerlink" title="箭头函数 和 普通函数"></a>箭头函数 和 普通函数</h4><p>（1）函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。</p>
+<p>（2）不可以当作构造函数，也就是说，不可以使用new命令，否则会抛出一个错误。</p>
+<p>（3）不可以使用arguments对象，该对象在函数体内不存在。如果要用，可以用Rest参数代替。</p>
+<p>（4）不可以使用yield命令，因此箭头函数不能用作Generator函数。</p>
+<h4 id="HTML5-离线缓存"><a href="#HTML5-离线缓存" class="headerlink" title="HTML5 离线缓存"></a>HTML5 离线缓存</h4><p>webStorage<br>manifest<br>indexedDB &amp; webSQL</p>
+<h4 id="BFC"><a href="#BFC" class="headerlink" title="BFC"></a>BFC</h4><p>BFC: 就是创建了一个独立的盒子, 这个盒子内部不受外部的影响, 也不会影响外部元素<br>但是它有一些特性:</p>
+<ol>
+<li>解决margin叠加的问题</li>
+<li>可以包含浮动元素,防止父元素高度塌陷</li>
+<li>防止块级元素被浮动元素覆盖.</li>
+</ol>
+<p>触发条件:</p>
+<ol>
+<li>float 除了 none</li>
+<li>绝对定位</li>
+<li>display: inline-block 和 table-cell</li>
+<li>overflow 除了 visible</li>
+</ol>
+<h4 id="清楚浮动"><a href="#清楚浮动" class="headerlink" title="清楚浮动"></a>清楚浮动</h4><ol>
+<li>空标签 clear both</li>
+<li>父元素浮动</li>
+<li>overflow: hidden</li>
+<li>伪元素 after</li>
+<li>BFC</li>
+</ol>
+<h4 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h4><p>浮动的框可以向左或向右移动，直到它的外边缘碰到包含框或另一个浮动框的边框为止。由于浮动框不在文档的普通流中，相当于不占用空间，所以文档的普通流中的块框表现得就像浮动框不存在一样。</p>
+<h4 id="inline-block-间隙"><a href="#inline-block-间隙" class="headerlink" title="inline-block 间隙"></a>inline-block 间隙</h4><p>缘由: 换行符或回车<br>去除方法: 书写格式, font: 0, 负margin</p>
+<h4 id="png-gif-jpg选择"><a href="#png-gif-jpg选择" class="headerlink" title="png gif jpg选择"></a>png gif jpg选择</h4><p>Chrome Data Compression Proxy 来 让chrome 所有图片都为webp格式<br>不能支持的, webpjs插件<br>安卓4.0原生支持,ios和4.0以后可以使用官方解析库</p>
+<h4 id="webpack优点"><a href="#webpack优点" class="headerlink" title="webpack优点"></a>webpack优点</h4><p>loader<br>插件<br>热替换<br>code-splitting<br>tree-shaking</p>
+<h4 id="规避同源策略"><a href="#规避同源策略" class="headerlink" title="规避同源策略"></a>规避同源策略</h4><p>除了代理服务器</p>
+<ul>
+<li>jsonp<br>简单适用,浏览器都可以支持</li>
+<li>websocket<br>是一种通信协议, 只要服务器支持就可以通过它进行跨域通信, origin表示请求源</li>
+<li>CORS<br><strong>CORS分为两种请求</strong>:<br>是 HEAD, GET, POST三种方法之一, 只能是content-type: appliction/x-www-from-yrlencodeed, mutipart/form-Data, text/plain之一, 就是简单请求, 其他的都是非简单请求.<br>简单请求:<br>浏览器直接发送CORS请求, 然后再头部加上origin, 如果origin指定的源不在许可的范围内, 服务器返回的头部没有<code>access-control-allow-orogin</code> 字段, 可以被XHR的onerror捕获.<br>如果是许可范围内的,服务器头部返回这些信息字段:<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">access-control-allow-origin : xxx,</div><div class="line">access-control-allow-credentials: true, //跨域cookie,该字段表示该跨域请求是否允许带上cookie</div><div class="line">access-control-expose-headers: Foobar //本来getResponseHeader(),只可以拿到Cache-Control、Content-Language、Content-Type、Expires、Last-Modified、Pragma,然后设置这个之后, 就可以取Foobar的值</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>要想cookie跨域,在服务器端设置<code>access-cotrol-allow-credentials</code>,还需要在ajax中设置<code>xhr.withCredentials = true</code>, <code>document.cookie</code>无法读取跨域的cookie<br>非简单请求:<br>put, delete, 或者 content-type 是 application/json的请求, 首先会发送一个 options 请求, 预检 是否在服务器允许跨域的列表里, 还有允许的http请求方法和信息字段.<br><code>Access-Control-Request-Method</code>, <code>Access-Control-Request-Headers</code></p>
+<h4 id="前端图片缓存"><a href="#前端图片缓存" class="headerlink" title="前端图片缓存"></a>前端图片缓存</h4><p>在js加载和执行的时候, 浏览器会停止渲染, 直到js文件加载执行完毕</p>
+<p>几个http缓存头部优先级: cache-control &gt; expires &gt; Etag &gt; last-modified</p>
+<h4 id="web-worker缺点"><a href="#web-worker缺点" class="headerlink" title="web worker缺点"></a>web worker缺点</h4><h4 id="堆和栈的区别"><a href="#堆和栈的区别" class="headerlink" title="堆和栈的区别"></a>堆和栈的区别</h4><p>堆（操作系统）： 一般由程序员分配释放， 若程序员不释放，程序结束时可能由OS回收，分配方式倒是类似于链表。<br>由于从操作系统管理的内存分配,所以在分配和销毁时都要占用时间，因此用堆的效率非常低.但是堆的优点在于,编译器不必知道要从堆里分配多少存储空间，也不必知道存储的数据要在堆里停留多长的时间,因此,用堆保存数据时会得到更大的灵活性。<br>是不连续的内存区域(一定限制的树型结构)</p>
+<p>栈（操作系统）：由操作系统自动分配释放 ，存放函数的参数值，局部变量的值等。其操作方式类似于数据结构中的栈。是一块连续的内存的区域.(先进后出)</p>
+<h4 id="ajax遇到gbk"><a href="#ajax遇到gbk" class="headerlink" title="ajax遇到gbk"></a>ajax遇到gbk</h4><p>发送请求时候: encodeURI(), encodeURIComponent() , 解码decode…<br>服务器相应的时候: 在头部加上<code>Content-Type:text/html;charset=GB2312</code></p>
+<h4 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h4><p>script为什么可以跨域:<br>可以加载并执行其他域JS文件<br>因为不能阻止,比如使用别人的库或者框架 , get请求比较安全</p>
+<p>postmessage实现跨域的原理是什么:<br>会在所有页面脚本执行完毕之后（e.g., 在该方法之后设置的事件、之前设置的timeout 事件,etc.）向目标窗口派发一个  MessageEvent 消息。<br>替代window.name、url查询字符和hash片段<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var popup = window.open(&apos;http://bbb.com&apos;, &apos;title&apos;);</div><div class="line">popup.postMessage(&apos;Hello World!&apos;, &apos;http://bbb.com&apos;);</div></pre></td></tr></table></figure></p>
+<h4 id="js捕获异常"><a href="#js捕获异常" class="headerlink" title="js捕获异常"></a>js捕获异常</h4><p>try-catch 只能在单一的作用域内有效。在一个异常被抛出的同时，解释器就会从 try-catch 中离开，ajax也是一样的。所以有两种选择，一种是在异步调用里面捕获异常：<br>全局异常处理可以在任何执行上下文中执行</p>
+<h4 id="前后端分离"><a href="#前后端分离" class="headerlink" title="前后端分离"></a>前后端分离</h4><ol>
+<li>彻底解放前端</li>
+<li>提高工作效率，分工更加明确</li>
+<li>局部性能提升</li>
+<li>降低维护成本</li>
+</ol>
+<h4 id="闭包的使用场景"><a href="#闭包的使用场景" class="headerlink" title="闭包的使用场景"></a>闭包的使用场景</h4><p>在网页中有时候会需要遮罩层，调用的时候我就创建一个，但是你不可能每次调用创建吧，所以如果存在就用以前的，如果不存在就创建新的，但同时有可能我永远都不需要这个遮罩层，所以我也有可能一直都不需要创建。</p>
+<p>添加监听器时记录索引</p>
+<p>模拟private变量</p>
+<p>柯里化</p>
+
+  </section>
+
+  
+
+<section class="post-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'letian'; 
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+  
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>

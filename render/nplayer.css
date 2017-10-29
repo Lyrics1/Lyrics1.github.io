@@ -1,0 +1,101 @@
+#nplayer {
+    position: fixed;
+    left: -215px;
+    bottom: 50px;
+    width: 195px;
+    height: 50px;
+    border-radius: 2px;
+    background-color: #FFF;
+    opacity: .6;
+    transition: .3s ease;
+    box-shadow: 2px 2px 4px #BBB;
+    padding-left: 25px;
+    padding-right: 10px;
+}
+
+#nplayer:hover {
+    opacity: 1;
+}
+
+#nplayer.show {
+    left: -15px;
+}
+
+#nplayer .switcher {
+    position: absolute;
+    height: 100%;
+    right: 0px;
+    top: 0px;
+    width: 15px;
+    background-color: #EB5651;
+    color: white;
+    font-weight: 700;
+    font-size: .7em;
+    line-height: 50px;
+}
+
+#nplayer .switcher:after {
+    margin-left: .3em;
+    content: ">";
+}
+
+#nplayer .fa {
+    font-size: 1.2em;
+    color: #333333;
+}
+
+#nplayer .ntitle {
+    position: absolute;
+    left: 30px;
+    top: 10px;
+    font-size: .9em;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 110px;
+}
+
+#nplayer .nsubtitle {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    font-size: .6em;
+    font-weight: 300;
+    color: #333333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 110px;
+}
+
+#nplayer .ncontrolplay {
+    cursor: pointer;
+    position: absolute;
+    top: .9em;
+    right: 3.3em;
+}
+
+#nplayer .ncontrolplay:before {
+    content: "\f04b";
+}
+
+#nplayer .startplay:before {
+    content: "\f04c";
+}
+
+#nplayer .ncontrolnext {
+    cursor: pointer;
+    position: absolute;
+    top: .9em;
+    right: 1.5em;
+}
+
+#nplayer .ncontrolnext:before {
+    content: "\f050";
+}
+
+#nplayer .ncontrolplay:hover , #nplayer .ncontrolnext:hover {
+    opacity: .8;
+    text-shadow: 1px -1px 1px #BBB;
+}

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      JS 正则表达式 | Lyrics 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="ZF">
+    
+    
+
+    <meta name="description" content="正则表达式的 RegExp 实例方法1. 创建方法 使用 new 操作符来创建  var box =RegExp(&amp;quot;Box&amp;quot;)      创建一个正则变量  模式字符串： Boxalert(box);                                显示  /Box/  显示是字面量的表示法  使用字面量的方法来创建var Box = /Box/;    / 模式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS 正则表达式 | Lyrics">
+<meta property="og:url" content="https://lyrics1.github.io/2016/10/12/JS-正则表达式/index.html">
+<meta property="og:site_name" content="Lyrics">
+<meta property="og:description" content="正则表达式的 RegExp 实例方法1. 创建方法 使用 new 操作符来创建  var box =RegExp(&amp;quot;Box&amp;quot;)      创建一个正则变量  模式字符串： Boxalert(box);                                显示  /Box/  显示是字面量的表示法  使用字面量的方法来创建var Box = /Box/;    / 模式">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://lyrics1.github.io/2016/10/12/img/QQ截图20161012200357.png">
+<meta property="og:image" content="https://lyrics1.github.io/2016/10/12/img/QQ截图20161012204938.png">
+<meta property="og:updated_time" content="2016-10-12T14:24:37.293Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JS 正则表达式 | Lyrics">
+<meta name="twitter:description" content="正则表达式的 RegExp 实例方法1. 创建方法 使用 new 操作符来创建  var box =RegExp(&amp;quot;Box&amp;quot;)      创建一个正则变量  模式字符串： Boxalert(box);                                显示  /Box/  显示是字面量的表示法  使用字面量的方法来创建var Box = /Box/;    / 模式">
+<meta name="twitter:image" content="https://lyrics1.github.io/2016/10/12/img/QQ截图20161012200357.png">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Lyrics</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          &lt; More and better /&gt;
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+                
+                <li class="navigation__item"><a href="https://github.com/Lyrics1" title="" class="">github</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">JS 正则表达式</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2016-10-12" class="post-meta__date date">2016-10-12</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h4 id="正则表达式的-RegExp-实例方法"><a href="#正则表达式的-RegExp-实例方法" class="headerlink" title="正则表达式的 RegExp 实例方法"></a>正则表达式的 RegExp 实例方法</h4><h6 id="1-创建方法"><a href="#1-创建方法" class="headerlink" title="1. 创建方法"></a>1. 创建方法</h6><ol>
+<li>使用 new 操作符来创建</li>
+</ol>
+<p><code>var box =RegExp(&quot;Box&quot;)</code>      创建一个正则变量  模式字符串： Box<br><code>alert(box);</code>                                显示  /Box/  显示是字面量的表示法</p>
+<ol>
+<li><p>使用字面量的方法来创建<br><code>var Box = /Box/;</code>    / 模式字符串 /   反斜杠是字面量表示的方法</p>
+<h6 id="2-正则表达式的匹配模式"><a href="#2-正则表达式的匹配模式" class="headerlink" title="2. 正则表达式的匹配模式"></a>2. 正则表达式的匹配模式</h6><ol>
+<li><p>g 表示全局模式，应用于所有的字符串，不会再发现第一个匹配项后就停止</p>
+</li>
+<li><p>i 不区分大小写</p>
+</li>
+<li><p>m 多行模式， 会换行进行查找</p>
+</li>
+</ol>
+<h6 id="3-RegExp-的测试方法"><a href="#3-RegExp-的测试方法" class="headerlink" title="3. RegExp 的测试方法"></a>3. RegExp 的测试方法</h6><ol>
+<li>texst（） 方法 </li>
+</ol>
+</li>
+</ol>
+<p>如果所查找字符中 <em> 存在 </em> 相对应的模式字符串 返回 true 反之 返回false</p>
+<p> <code>var box = /Box/g;</code><br> <code>var str= &quot;I dont&#39;t  know this box&quot;;</code><br> <code>alert(box.test(str));</code>   会弹出   false </p>
+<p> <code>var box = /Box/gi;</code><br> <code>var str= &quot;I dont&#39;t  know this box&quot;;</code><br> <code>alert(box.test(str));</code>   会弹出   true</p>
+<ol>
+<li>exec( ) 方法</li>
+</ol>
+<p>依据相应的匹配模式 返回 包含 <em> 第一个</em> 匹配想信息的数组 ，返回的数组是Array的实例，（typeof 是 object) 包含两个而外的属性 ： index 和 input<br>index 表示匹配项在字符串中出现的位置 , input 表示应用正则表达式的字符串(           );</p>
+<p><code>var box = /Box/gi;</code><br> <code>var str= &quot;I dont&#39;t  know this box&quot;;</code><br> <code>alert(box.exec(str));</code>   会弹出  box<br>  <code>typeof(box.exec(str))</code>   查找到 是Array  反之是 null;</p>
+<ol>
+<li>使用字符串的匹配方法</li>
+</ol>
+<ol>
+<li><p>match（） 以数组类型返回匹配成功的字符</p>
+<p><code>var pattern = /box/gi;</code><br><code>var str= &quot;I dont&#39;t box know this box&quot;;</code><br><code>alert(str.match(pattern);</code>  返回box,box 数组，但是如果匹配模式 没有 g 则只会返回 box 就只会返回第一个匹配而数组，不会全部返回</p>
+</li>
+<li><p>search（） 返回第一个匹配成功的字符的位置 （不用全局匹配模式 g  只会返回第一个位置)</p>
+</li>
+<li><p>replace( ) 替换相匹配的字符 （g  则全部被替换  无 g 则只会替换第一个匹配的字符串)<br>  两个参数，第一个是匹配的正则变量，第二个是所被替换后的字符串；</p>
+</li>
+</ol>
+<p>4.split() 拆分字符串为数组<br>以数组的方式返回<br> <code>var pattern = / /gi;</code><br>   <code>var str= &quot;I dont&#39;t box know this box&quot;;</code><br>   <code>alert(str.split(pattern);</code>   </p>
+<h4 id="RegExp-对象的静态属性-直接使用，无需声明"><a href="#RegExp-对象的静态属性-直接使用，无需声明" class="headerlink" title="RegExp 对象的静态属性 (直接使用，无需声明)"></a>RegExp 对象的静态属性 (直接使用，无需声明)</h4><h6 id="1-静态属性的使用"><a href="#1-静态属性的使用" class="headerlink" title="1. 静态属性的使用"></a>1. 静态属性的使用</h6><p> 兼容性不太好 一般不使用<br><figure class="highlight plain"><figcaption><span>str</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var pattern = /box/gi;</div><div class="line">pattern.test(str);     		或者 pattern.exec();  静态的属性必须执行</div><div class="line">alert(RegExp.input)     	显示“I dont&apos;t box know this box”      		 * input ：当前被匹配的字符串 *</div><div class="line">alert(RegExp.leftContext)    	显示 &quot;I dont&apos;t box know this  “  		 * leftContext：最后一次匹配的前子串 *</div><div class="line">alert(RegExp.rightContext)  	因为最后一次匹配的后面没有字符串，所以为空，  * rightContext  :左后一次匹配的后子串　＊</div><div class="line">alert(RegExp.lastMatch);          显示 box					 * lastMatch：最后一个匹配的字符串 *</div><div class="line">alert(RegExp.lastParen); 	显示 空	（没有圆括号）				 * lastParen : 最后一对圆括号内的匹配字符串 *</div><div class="line">alert(RegExp.multiline)  	显示  false					 * multiline : 是否支持多行的表达式的 Boolean *</div></pre></td></tr></table></figure></p>
+<h6 id="2-正则表达式的字符匹配"><a href="#2-正则表达式的字符匹配" class="headerlink" title="2. 正则表达式的字符匹配"></a>2. 正则表达式的字符匹配</h6><p><img src="../img/QQ截图20161012200357.png"><br><!-- ![字符匹配](./img/QQ截图20161012200357.png)   -->   所有的字符匹配 类似于 用一个匹配的字符去代替某个字符还有就是符合匹配的位置</p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">var pattern=/g.ole/;</div><div class="line">var str=&quot;goole&quot;;</div><div class="line">alert(pattern.test(str));          	true  </div><div class="line"></div><div class="line">var pattern=/go\sle/;</div><div class="line">var str=&quot;goole&quot;;</div><div class="line">alert(pattern.test(str));  </div><div class="line"></div><div class="line">var pattern=/goole&#123;4,8&#125;/;	</div><div class="line">var str=&quot;gooleeee&quot;;</div><div class="line">alert(pattern.test(str));  	e在被匹配的字符号中出现4~8次 才是正确的</div><div class="line"></div><div class="line">var pattern=/(google)&#123;4,8&#125;/;</div><div class="line">var str=&quot;googlegooglegooglegoogle&quot;;    </div><div class="line">alert(pattern.test(str));  	 google在被匹配的字符号中出现4~8次 才是正确的</div><div class="line"></div><div class="line">var pattern=/g(.*)k/;  		 * (.*) * 表示g 和 k  之间的匹配 字符 （和Python抓包一样)</div><div class="line">var str=&quot;gllllllllk&quot;;</div><div class="line">alert(pattern.test(str)); 		true</div><div class="line">alert(RegExp.$1)         		RegExp.$1 表示g 和 k  之间的匹配 字符   &quot;llllllll&quot; </div><div class="line"></div><div class="line"> var pattern=/g(.*)k(.*)L/;</div><div class="line">var str=&quot;gllllllllkoooooL&quot;;</div><div class="line">alert(pattern.test(str));</div><div class="line">alert(RegExp.$1)  ;</div><div class="line">alert(RegExp.$2)</div></pre></td></tr></table></figure>
+</code></pre><p><strong>使用 RegExp 方法 要先运行一下 pattern.test(str)  或 pattern.exec(str))</strong><br><strong>$1，$2 , $3 依次表示 匹配的字符</strong></p>
+<p><img src="../img/QQ截图20161012204938.png"><br><!-- ![贪婪模式](../img/QQ截图20161012204938.png) --></p>
+<p>贪婪模式最常见的是  （.*）</p>
+<p><code>var pattern=/g(.*)k/;</code><br><code>var str=&quot;gllllllllk  gllllllllk gllllllllk gllllllllk   &quot;;</code></p>
+<p>如果使用 replace  则产生的效果是 将g 和 k 之间的所有匹配项进行替换，即使匹配模式没有指定是全局模式 。</p>
+<p>结束贪婪模式 最好的方法是 （.*?) 这样匹配只会匹配第一项（没有指定是全局模式）</p>
+<p>还有一种 惰性 方法是 ：<code>var pattern=/g([^g]*)k/g;</code><br>           <code>var str=&quot;gllllllllk  gllllllllk gllllllllk gllllllllk   &quot;;</code><br>           使用去掉 . 用 [^g] 来限制对 g 的匹配 出现 g 就不匹配  </p>
+<p><abbr color="blue"><br>    <strong color="red">扩展链接</strong><br>    <a href="http://www.jianshu.com/p/81fdd0a1e7d4" target="_blank" rel="external">js-正则表达式详解 - 简书</a><br>    <a href="http://www.jianshu.com/p/542e58d413e8" target="_blank" rel="external">Js 简书 精华</a><br>    <a href="http://www.jianshu.com/p/b8c7b84c3f8b" target="_blank" rel="external">JS使用方法大全 - 简书</a><br>    <a href="http://www.jianshu.com/p/f91f6b440566" target="_blank" rel="external">正则表达式 基础到深入–进阶一,如何实现最近匹配?</a><br></abbr></p>
+
+  </section>
+
+  
+
+<section class="post-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'letian'; 
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+  
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>

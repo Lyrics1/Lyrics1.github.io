@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      node初步学习 | Lyrics 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="ZF">
+    
+    
+
+    <meta name="description" content="小细节 node 是单线程的，（指的是node 中的js是单线程的），node自身是多线程的,利用的是线程池 node 中采用，模块引用（require())，模块定义(AMD,CMD,node自身的隐式封装)，模块标识（moudle.id) node 的封装：就是在函数用括号括起来 AMD 是采用define(function(){})进行封装，采用返回值进行到处 （return exports">
+<meta property="og:type" content="article">
+<meta property="og:title" content="node初步学习 | Lyrics">
+<meta property="og:url" content="https://lyrics1.github.io/2017/05/12/node初步学习/index.html">
+<meta property="og:site_name" content="Lyrics">
+<meta property="og:description" content="小细节 node 是单线程的，（指的是node 中的js是单线程的），node自身是多线程的,利用的是线程池 node 中采用，模块引用（require())，模块定义(AMD,CMD,node自身的隐式封装)，模块标识（moudle.id) node 的封装：就是在函数用括号括起来 AMD 是采用define(function(){})进行封装，采用返回值进行到处 （return exports">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-09-04T15:21:58.415Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="node初步学习 | Lyrics">
+<meta name="twitter:description" content="小细节 node 是单线程的，（指的是node 中的js是单线程的），node自身是多线程的,利用的是线程池 node 中采用，模块引用（require())，模块定义(AMD,CMD,node自身的隐式封装)，模块标识（moudle.id) node 的封装：就是在函数用括号括起来 AMD 是采用define(function(){})进行封装，采用返回值进行到处 （return exports">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Lyrics</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          &lt; More and better /&gt;
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+                
+                <li class="navigation__item"><a href="https://github.com/Lyrics1" title="" class="">github</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">node初步学习</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2017-05-12" class="post-meta__date date">2017-05-12</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h3 id="小细节"><a href="#小细节" class="headerlink" title="小细节"></a>小细节</h3><ol>
+<li>node 是单线程的，（指的是node 中的js是单线程的），node自身是多线程的,利用的是线程池</li>
+<li>node 中采用，模块引用（require())，模块定义(AMD,CMD,node自身的隐式封装)，模块标识（moudle.id)</li>
+<li>node 的封装：就是在函数用括号括起来</li>
+<li>AMD 是采用define(function(){})进行封装，采用返回值进行到处 （return exports.method();)</li>
+<li>CMD define(function(){})进行封装,require ,exports ,moudle,通过形参传递给函数，通过require()调用；</li>
+<li>parse()转化为对象，format 转化为字符串，resolve()进行 url 拼接</li>
+<li>为什么通过headers对象访问到的HTTP请求头或响应头字段不是驼峰的？：<br>  从规范上讲，HTTP请求头和响应头字段都应该是驼峰的。但现实是残酷的，不是每个HTTP服务端或客户端程序都严格遵循规范，所以NodeJS在处理从别的客户端或服务端收到的头字段时，都统一地转换为了小写字母格式，以便开发者能使用统一的方式来访问头字段，例如headers[‘content-length’]。</li>
+<li>为什么http模块创建的HTTP服务器返回的响应是chunked传输方式的？<br> .writeHeader()写入响应头，.write 写入相应体, .end()方法结束响应<br>  因为默认情况下，使用.writeHead方法写入响应头后，允许使用.write方法写入任意长度的响应体数据，并使用.end方法结束一个响应。由于响应体数据长度不确定，因此NodeJS自动在响应头里添加了Transfer-Encoding: chunked字段，并采用chunked传输方式。但是当响应体数据长度确定时，可使用.writeHead方法在响应头里加上Content-Length字段，这样做之后NodeJS就不会自动添加Transfer-Encoding字段和使用chunked传输方式。</li>
+<li></li>
+</ol>
+<h4 id="异步IO"><a href="#异步IO" class="headerlink" title="异步IO"></a>异步IO</h4><blockquote>
+<p>阻塞 IO 和 非阻塞 IO 的区别：（内核在进行IO 操作时都要通过文件描述符进行管理）</p>
+<ol>
+<li>阻塞 IO 是需要完成整个数据获取的过程，会造成 时间和 cpu的浪费</li>
+<li>非阻塞 IO 是不带数据直接返回，想要获取数据需要再次通过文件描述符进行读取；</li>
+<li>非阻塞　IO 需要通过重复操作调用的技术（轮询）来判断是否进程已经结束，是否可以获得最终想要获得的数据</li>
+<li>轮询技术　：１.read　（不停地read 一直进行调用来判断）２．select (先进行　read ，然后select 进行获取数据　存在限制：采用１０２４　长度数组进行存储状态，所最多同时检查１０２４个文件描述符）３．pool （是在select 基础上进行改进，采用链表来进行存储，不过文件过多时，性能还是比较差） 4.epoll (Linux 下 采用休眠的方式进行轮询，在进入轮询的时候没有检查到IO 事件，将会休眠，直到事件发生将其唤醒，不会浪费cpu,效率高）</li>
+</ol>
+</blockquote>
+<p>异步IO </p>
+<blockquote>
+<p>有多种实现方式：</p>
+<ol>
+<li>windows 平台使用 IOCP进行实现异步IO （调用异步 IO方法，等待IO完成后的通知，执行回调，内部使用的是线程池</li>
+</ol>
+<p>node 的实现异步 IO<br>1.事件循环（进程启动会创建一个事件循环，每一次的循环成为 Tick ,每次 Tick检查是否有事件待处理，有就去除事件及其相关的回调函数，如果存在相关联的回调，执行回调，然后进入下次 Tick ，如果没有事件处理，则退出进程。<br>2.观察者：对事件进行兼监听的，判断是否有事件进行处理<br>3.请求对象： JS调用 到内核 IO 操作完成的过渡过程中，会产生一个请求对象（包含请求的数据 req-&gt;result，和各种状态）</p>
+<ol>
+<li>执行回调</li>
+</ol>
+</blockquote>
+<h4 id="非IO的异步API"><a href="#非IO的异步API" class="headerlink" title="非IO的异步API"></a>非IO的异步API</h4><ol>
+<li>settimeout();</li>
+<li>setInterval();</li>
+<li>process.nextTick(); -&gt;idle观察者，每次循环中都会执行完数组中的所有事件</li>
+<li>setImmediate() -&gt;check观察者 每次只会执行链表上的一个事件<br>优先级：3&gt;4 ,（每次轮询中idle观察者 &gt; IO观察者 &gt; check观察者</li>
+</ol>
+<h4 id="node-js-回调函数"><a href="#node-js-回调函数" class="headerlink" title="node.js 回调函数"></a>node.js 回调函数</h4><p>将回调函数作为函数的参数，当这个函数执行完成之后执行回调函数</p>
+<p>js 代码: fn2( fn1(“argument”) )</p>
+<p>node.js 代码 ： fn1（”argument”,fn2(argument){<br>    //doing something<br>})</p>
+
+  </section>
+
+  
+
+<section class="post-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'letian'; 
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+  
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>

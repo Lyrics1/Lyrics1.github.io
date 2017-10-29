@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      JavaScript变量,作用域和内存 | Lyrics 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="ZF">
+    
+    
+
+    <meta name="description" content="分为两种类型：基本类型和引用类型基本类型值：每一个数据包含自己特有的数据，只含有一种数据 是按值访问，直接对值进行操作 是保存在变量中 （栈内存) 引用类型：属于包含多个值的一个对象，一个对象包含很多属性 保存在内存中  Javascript 不允许直接访问内存，（不能直接操作对象的内存空间）   自我感觉是操作对象的属性 (堆内存中) 对于引用类型的值，可以动态的添加，删除，修改属性和方法 引用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript变量,作用域和内存 | Lyrics">
+<meta property="og:url" content="https://lyrics1.github.io/2016/07/23/JavaScript变量作用域和内存/index.html">
+<meta property="og:site_name" content="Lyrics">
+<meta property="og:description" content="分为两种类型：基本类型和引用类型基本类型值：每一个数据包含自己特有的数据，只含有一种数据 是按值访问，直接对值进行操作 是保存在变量中 （栈内存) 引用类型：属于包含多个值的一个对象，一个对象包含很多属性 保存在内存中  Javascript 不允许直接访问内存，（不能直接操作对象的内存空间）   自我感觉是操作对象的属性 (堆内存中) 对于引用类型的值，可以动态的添加，删除，修改属性和方法 引用">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-08-09T11:27:14.816Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript变量,作用域和内存 | Lyrics">
+<meta name="twitter:description" content="分为两种类型：基本类型和引用类型基本类型值：每一个数据包含自己特有的数据，只含有一种数据 是按值访问，直接对值进行操作 是保存在变量中 （栈内存) 引用类型：属于包含多个值的一个对象，一个对象包含很多属性 保存在内存中  Javascript 不允许直接访问内存，（不能直接操作对象的内存空间）   自我感觉是操作对象的属性 (堆内存中) 对于引用类型的值，可以动态的添加，删除，修改属性和方法 引用">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Lyrics</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          &lt; More and better /&gt;
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+                
+                <li class="navigation__item"><a href="https://github.com/Lyrics1" title="" class="">github</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">JavaScript变量,作用域和内存</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2016-07-23" class="post-meta__date date">2016-07-23</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h4 id="分为两种类型：基本类型和引用类型"><a href="#分为两种类型：基本类型和引用类型" class="headerlink" title="分为两种类型：基本类型和引用类型"></a>分为两种类型：基本类型和引用类型</h4><p>基本类型值：每一个数据包含自己特有的数据，只含有一种数据</p>
+<p>是按值访问，直接对值进行操作</p>
+<p>是保存在变量中 <strong>（栈内存)</strong></p>
+<p>引用类型：属于包含多个值的一个对象，一个对象包含很多属性</p>
+<p>保存在内存中  Javascript 不允许直接访问内存，（不能直接操作对象的内存空间）  </p>
+<p>自我感觉是操作对象的属性 <strong>(堆内存中)</strong></p>
+<p>对于引用类型的值，可以动态的添加，删除，修改属性和方法</p>
+<p>引用类型的变量实际包含的不是变量本身，而是一个指向该对象的指针</p>
+<p>所以当复制一个引用类型时（一变则全变）</p>
+<h4 id="创建："><a href="#创建：" class="headerlink" title="创建："></a>创建：</h4><pre><code><figure class="highlight plain"><figcaption><span>type</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">	1:</div><div class="line">			var person=new Object();</div><div class="line">			person.name=&quot;zf&quot;</div><div class="line">			person.age=18;</div><div class="line">			alert(person);//弹框显示数据类型</div><div class="line">			document.write(person.name);</div><div class="line"></div><div class="line">	2:</div><div class="line">	</div><div class="line">			person=&#123;name:&quot;zf&quot;,age:18&#125;;</div><div class="line">			alert(person);</div><div class="line">			document.write(person.name);*/</div><div class="line"></div><div class="line"></div><div class="line">	3:使用对象构造器，使用函数</div><div class="line">			function person(name,age)</div><div class="line">			&#123;</div><div class="line">				this.name=&quot;zf&quot;;</div><div class="line">				this.age=18;</div><div class="line">			&#125;</div><div class="line">			M=new person;</div><div class="line">			alert(M);</div><div class="line">			document.write(M.name);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+</code></pre><h4 id="复制变量基本类型和引用类型的区别；"><a href="#复制变量基本类型和引用类型的区别；" class="headerlink" title="复制变量基本类型和引用类型的区别；"></a>复制变量基本类型和引用类型的区别；</h4><pre><code>基本类型；
+
+var n1=&quot;11&quot;;
+var n2=n1;    //n1=n2但是个有自己的内存，互不影响
+
+引用类型：
+
+var n1=new Object();
+var n1=n2;
+
+具有一致性:同时指向对中的一个对象（同一个），所以可以相互交换，所包含的属性，操作都一样，是相互影响的
+</code></pre><h4 id="传递参数"><a href="#传递参数" class="headerlink" title="传递参数"></a>传递参数</h4><pre><code>所有的函数的参数都是按值传递
+
+&lt;a href=&quot;http://www.cnblogs.com/imlucky/archive/2012/11/10/2763949.html&quot;&gt;javascript传递参数&lt;/a&gt;
+
+#### 检测类型：基本类型数据：typeof  返回值是类型
+
+            var name=&quot;11&quot;;
+
+            alert(name)  //string
+
+            函数返回function
+
+          引用类型：instanceof  返回值是布尔值
+
+            var person=new Object();
+
+            alert(person instanceof string) //检测是不是字符类型的
+
+            对于基本类型总是返回false
+</code></pre><h4 id="没有块级作用域：变量的作用范围"><a href="#没有块级作用域：变量的作用范围" class="headerlink" title="没有块级作用域：变量的作用范围"></a>没有块级作用域：变量的作用范围</h4><p>if(true)<br>{<br>    var i=1;<br>}</p>
+<p>alert(i)   i=1;执行完if语句i 并没有销毁，</p>
+<p>！当在函数中所用的变量没有声明变量；则该变量将被添加到全局环境中；当函数执行完时，变量不会释放，因为变成全局变量</p>
+<p>所以建议：注意变量的声明</p>
+<h4 id="所有变量都含有执行环境（作用域）"><a href="#所有变量都含有执行环境（作用域）" class="headerlink" title="所有变量都含有执行环境（作用域）"></a>所有变量都含有执行环境（作用域）</h4><p>执行环境：全局执行环境(执行完毕内存释放 除非自己手动释放内存（优化代码）)</p>
+<pre><code>函数执行环境(执行函数时才会给分配内存，执行完则释放！!（局部变量一定要声明）不然会称为全局变量)
+
+全局变量不能直接访问局部变量，但是局部变量可以直接访问全局变量，链的作用域，只能向上链中查找
+</code></pre><h4 id="垃圾收集：标记清除法（常用）-和引用计数法"><a href="#垃圾收集：标记清除法（常用）-和引用计数法" class="headerlink" title="垃圾收集：标记清除法（常用） 和引用计数法"></a>垃圾收集：标记清除法（常用） 和引用计数法</h4>
+  </section>
+
+  
+
+<section class="post-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'letian'; 
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+  
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>

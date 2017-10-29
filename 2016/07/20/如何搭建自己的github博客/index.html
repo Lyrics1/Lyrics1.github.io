@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      如何搭建自己的github博客 | Lyrics 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="ZF">
+    
+    
+
+    <meta name="description" content="配置环境 安装Node(必须)作用：用来生成静态页面的Node.js官网下载  安装Git (必须)作用：把本地的hexo内容提交到github上去.廖雪峰的git教程（参考）注意:基本上命令出现warning,error 都要自行百度解决不过在此有个错误会给出方法：错误：npm ERR! Windows_NT 6.1.7601npm ERR! argv “E:\node\\node.exe” “">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何搭建自己的github博客 | Lyrics">
+<meta property="og:url" content="https://lyrics1.github.io/2016/07/20/如何搭建自己的github博客/index.html">
+<meta property="og:site_name" content="Lyrics">
+<meta property="og:description" content="配置环境 安装Node(必须)作用：用来生成静态页面的Node.js官网下载  安装Git (必须)作用：把本地的hexo内容提交到github上去.廖雪峰的git教程（参考）注意:基本上命令出现warning,error 都要自行百度解决不过在此有个错误会给出方法：错误：npm ERR! Windows_NT 6.1.7601npm ERR! argv “E:\node\\node.exe” “">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2016-10-16T08:26:34.732Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何搭建自己的github博客 | Lyrics">
+<meta name="twitter:description" content="配置环境 安装Node(必须)作用：用来生成静态页面的Node.js官网下载  安装Git (必须)作用：把本地的hexo内容提交到github上去.廖雪峰的git教程（参考）注意:基本上命令出现warning,error 都要自行百度解决不过在此有个错误会给出方法：错误：npm ERR! Windows_NT 6.1.7601npm ERR! argv “E:\node\\node.exe” “">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Lyrics</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          &lt; More and better /&gt;
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+                
+                <li class="navigation__item"><a href="https://github.com/Lyrics1" title="" class="">github</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">如何搭建自己的github博客</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2016-07-20" class="post-meta__date date">2016-07-20</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h4 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h4><ol>
+<li>安装Node(必须)<br>作用：用来生成静态页面的<br><a href="https://nodejs.org" target="_blank" rel="external">Node.js官网下载</a></li>
+</ol>
+<h4 id="安装Git-必须"><a href="#安装Git-必须" class="headerlink" title="安装Git (必须)"></a>安装Git (必须)</h4><p>作用：把本地的hexo内容提交到github上去.<br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/" target="_blank" rel="external">廖雪峰的git教程（参考）</a><br>注意:基本上命令出现warning,error 都要自行百度解决<br>不过在此有个错误会给出方法：<br>错误：<br>npm ERR! Windows_NT 6.1.7601<br>npm ERR! argv “E:\node\\node.exe” “E:\node\node_modules\npm\bin\npm-cli.js” “install”<br>npm ERR! node v0.12.0<br>npm ERR! npm v2.5.1<br>…..</p>
+<blockquote>
+<p>解决方法：<br>镜像使用方法（三种办法任意一种都能解决问题，建议使用第三种，将配置写死，下次用的时候配置还在）:<br>1.通过config命令<br>npm config set registry <a href="http://registry.cnpmjs.org" target="_blank" rel="external">http://registry.cnpmjs.org</a></p>
+</blockquote>
+<p>2.先执行：npm info underscore<br>然后：npm –registry <a href="http://registry.cnpmjs.org" target="_blank" rel="external">http://registry.cnpmjs.org</a> info underscore</p>
+<p>3.编辑 ~/.npmrc 加入下面内容<br>registry = <a href="http://registry.cnpmjs.org" target="_blank" rel="external">http://registry.cnpmjs.org</a></p>
+<h4 id="正式安装Hexo"><a href="#正式安装Hexo" class="headerlink" title="正式安装Hexo"></a>正式安装Hexo</h4><ol>
+<li>Node和Git都安装好后,首先创建一个文件夹存放用户hexo的配置文件<br>执行如下命令安装Hexo：</li>
+</ol>
+<p>sudo npm install-g hexo</p>
+<ol>
+<li>初始化然后，执行init命令初始化hexo,命令：</li>
+</ol>
+<p>hexo init    <em> 就这一下 使用这个命令，配置好之后就不要用了 都是泪的教训 ！！这个会初始化config-yml文件  </em></p>
+<p>好啦，至此，全部安装工作已经完成！</p>
+<ol>
+<li>生成静态页面</li>
+</ol>
+<p>hexo generate（hexo g也可以）</p>
+<ol>
+<li>本地启动</li>
+</ol>
+<p>启动本地服务，进行文章预览调试，命令：</p>
+<p>hexo server</p>
+<ol>
+<li><p>浏览器输入<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></p>
+</li>
+<li><p>配置Github<br>建立Repository</p>
+</li>
+</ol>
+<p>建立与你用户名对应的仓库，仓库名必须为【your_user_name.github.io】，固定写法</p>
+<p>然后建立关联，我的blog在本地/Users/leopard/blog，blog是我之前建的东西也全在这里面，有：</p>
+<p>现在我们需要_config.yml文件，来建立关联，命令：</p>
+<p>vim _config.yml</p>
+<p>翻到最下面，改成我这样子的</p>
+<p>URL ：<a href="https://yourgitName.github.io" target="_blank" rel="external">https://yourgitName.github.io</a></p>
+<p>deploy:</p>
+<pre><code>type: git
+
+repo:https://github.com/leopardpan/leopardpan.github.io.git
+
+branch:master
+</code></pre><p>然后执行命令：</p>
+<p>!!!注意 除了https://的 冒号： 其他的后面都有空格</p>
+<p>npm install hexo-deployer-git –save</p>
+<ol>
+<li>然后，执行配置命令：</li>
+</ol>
+<p>hexo deploy</p>
+<p>然后再浏览器中输入<a href="http://Lyrics1.github.io/就行了，">http://Lyrics1.github.io/就行了，</a><br>我的github的账户叫Lyrics1,把这个改成你github的账户名就行了</p>
+<ol>
+<li>如果打开时404 页面的话，这个问题是这样解决的</li>
+<li>第一删除你hexo 下面的.deploy_git文件夹</li>
+<li>第二 运行 git-config –global core.autocrlf    这里命令直接输入，不用修改</li>
+</ol>
+
+  </section>
+
+  
+
+<section class="post-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'letian'; 
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+  
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>

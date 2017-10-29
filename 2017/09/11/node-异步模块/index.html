@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      node--异步模块 | Lyrics 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="ZF">
+    
+    
+
+    <meta name="description" content="异步  node Async 高阶函数 概念参数可以是函数，返回值返回一个匿名函数 偏函数 概念根据参数定制函数 async 模块github Async;  async.series()函数，顺序执行一组函数，参数类型是什么返回类型和参数类型一致（第一个参数可以是一个数组也可以是一个JSON对象）串行执行  123456789101112    async.series(&amp;#123;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="node--异步模块 | Lyrics">
+<meta property="og:url" content="https://lyrics1.github.io/2017/09/11/node-异步模块/index.html">
+<meta property="og:site_name" content="Lyrics">
+<meta property="og:description" content="异步  node Async 高阶函数 概念参数可以是函数，返回值返回一个匿名函数 偏函数 概念根据参数定制函数 async 模块github Async;  async.series()函数，顺序执行一组函数，参数类型是什么返回类型和参数类型一致（第一个参数可以是一个数组也可以是一个JSON对象）串行执行  123456789101112    async.series(&amp;#123;">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-09-20T11:40:31.453Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="node--异步模块 | Lyrics">
+<meta name="twitter:description" content="异步  node Async 高阶函数 概念参数可以是函数，返回值返回一个匿名函数 偏函数 概念根据参数定制函数 async 模块github Async;  async.series()函数，顺序执行一组函数，参数类型是什么返回类型和参数类型一致（第一个参数可以是一个数组也可以是一个JSON对象）串行执行  123456789101112    async.series(&amp;#123;">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Lyrics</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          &lt; More and better /&gt;
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+                
+                <li class="navigation__item"><a href="https://github.com/Lyrics1" title="" class="">github</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">node--异步模块</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2017-09-11" class="post-meta__date date">2017-09-11</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <p>异步  node Async</p>
+<h4 id="高阶函数-概念"><a href="#高阶函数-概念" class="headerlink" title="高阶函数 概念"></a>高阶函数 概念</h4><pre><code>参数可以是函数，返回值返回一个匿名函数
+</code></pre><h4 id="偏函数-概念"><a href="#偏函数-概念" class="headerlink" title="偏函数 概念"></a>偏函数 概念</h4><pre><code>根据参数定制函数
+</code></pre><h4 id="async-模块"><a href="#async-模块" class="headerlink" title="async 模块"></a>async 模块</h4><p><a href="https://github.com/alsotang/async_demo" target="_blank" rel="external">github Async</a>;</p>
+<ol>
+<li>async.series()函数，顺序执行一组函数，参数类型是什么返回类型和参数类型一致（第一个参数可以是一个数组也可以是一个JSON对象）<br>串行执行</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">    async.series(&#123;</div><div class="line">        one: function(callback)&#123;</div><div class="line">            callback(null, 1);</div><div class="line">        &#125;,</div><div class="line">        two: function(callback)&#123;</div><div class="line">            callback(null, 2);</div><div class="line">        &#125;</div><div class="line">    &#125;,function(err, results) &#123;</div><div class="line">     console.log(results);</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">//&#123; one: 1, two: 2 &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">var async = require(&apos;async&apos;);</div><div class="line">async.series(&#123;</div><div class="line">  one:function(callback)&#123;</div><div class="line">    callback(null,1);</div><div class="line">  &#125;,</div><div class="line">  two:function(callback)&#123;</div><div class="line">    callback(null,2);</div><div class="line">  &#125;</div><div class="line">&#125;,function(err,result)&#123;</div><div class="line">console.log(result);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">//[1,2]</div></pre></td></tr></table></figure>
+<ol>
+<li>async.waterfall(tasks,callback);<br>第一个参数必须是数组类型，顺序执行函数，将上一个函数的值传递给下一个函数</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var async = require(&apos;async&apos;);</div><div class="line">async.waterfall([function(callback)&#123;</div><div class="line">  callback(null,1);</div><div class="line">&#125;,function(data,callback)&#123;</div><div class="line">  callback(null,data+2);</div><div class="line">&#125;],function(err,data)&#123;</div><div class="line">  console.log(data);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">//3</div></pre></td></tr></table></figure>
+<ol>
+<li>async.parallel(tasks,callback)每个函数都是立即执行（异步的并行执行）</li>
+</ol>
+<p>4.parallelLimit(tasks, limit, [callback])</p>
+<p>parallelLimit函数和parallel类似，但是它多了一个参数limit。 limit参数限制任务只能同时并发一定数量，而不是无限制并发，</p>
+<p>5.whilst(test, fn, callback)</p>
+<p>相当于while，但其中的异步调用将在完成后才会进行下一次循环。当你需要<strong>循环异步</strong>的操作的时候，它可以帮助你。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var count = 0;</div><div class="line">async.whilst(</div><div class="line">    function () &#123; return count &lt; 5; &#125;,//相当于if判读句</div><div class="line">    function (callback) &#123;</div><div class="line">        count++; //执行函数</div><div class="line">        setTimeout(callback, 1000);</div><div class="line">    &#125;,</div><div class="line">    function (err) &#123;</div><div class="line"> 	//函数执行结束</div><div class="line">    &#125;</div><div class="line">);</div></pre></td></tr></table></figure></p>
+<p>6.doWhilst(fn, test, callback)，类似do while<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"> var count = 0;</div><div class="line"> async.doWhilst(</div><div class="line">     function (callback) &#123;</div><div class="line">         count++;</div><div class="line">         setTimeout(callback, 1000);</div><div class="line">     &#125;,</div><div class="line">     function () &#123; return count &lt; 5; &#125;,</div><div class="line">     function (err) &#123;</div><div class="line"></div><div class="line">     console.log(err);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<ol>
+<li><p>util 是和whilst 相反的，返回false 的时候执行函数，判断不成立的时候执行函数 (类似于while循环)<br>如果你需要异步循环</p>
+</li>
+<li><p>do util 类比上文</p>
+</li>
+</ol>
+<p>9.compose() 可以创建一个异步函数的集合函数，将传入的多个异步函数包含在其中，当我们执行这个集合函数时，会依次执行每一个异步函数，每个函数会消费上一次函数的返回值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">    var async=require(&quot;async&quot;);</div><div class="line">	   function fn1(n, callback) &#123;</div><div class="line">        setTimeout(function () &#123;</div><div class="line">            callback(null, n + 1);</div><div class="line">        &#125;, 1000);</div><div class="line">    &#125;</div><div class="line">    function fn2(n, callback) &#123;</div><div class="line">        setTimeout(function () &#123;</div><div class="line">            callback(null, n * 3);</div><div class="line">        &#125;, 1000);</div><div class="line">    &#125;</div><div class="line">    var demo = async.compose(fn2, fn1);</div><div class="line">    demo(4, function (err, result) &#123;</div><div class="line">    console.log(&quot;LL&quot;,result);</div><div class="line">      </div><div class="line">    &#125;);</div><div class="line">//LL 15 先执行fn1,将fn1的结果传递给fn2</div></pre></td></tr></table></figure>
+<ol>
+<li><p>forever函数比较特殊，它的功能是无论条件如何，函数都一直循环执行，只有出现程序执行的过程中出现错误时循环才会停止，callback才会被调用。</p>
+</li>
+<li><p>自动依赖处理 async.auto() 方法</p>
+</li>
+</ol>
+<p>writeFile依赖getData和makeFolder,emailLink依赖writeFile。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"> async.auto(&#123;</div><div class="line">    getData: function(callback)&#123;</div><div class="line">        callback(null, &apos;data&apos;, &apos;converted to array&apos;);</div><div class="line">    &#125;,</div><div class="line">    makeFolder: function(callback)&#123;        </div><div class="line">        callback(null, &apos;folder&apos;);</div><div class="line">    &#125;,</div><div class="line">    writeFile: [&apos;getData&apos;, &apos;makeFolder&apos;, function(callback, results)&#123;        </div><div class="line">        callback(null, &apos;filename&apos;);</div><div class="line">    &#125;],</div><div class="line">    emailLink: [&apos;writeFile&apos;, function(callback, results)&#123;</div><div class="line">        callback(null, &#123;&apos;file&apos;:results.writeFile, &apos;email&apos;:&apos;user@example.com&apos;&#125;);</div><div class="line">    &#125;]</div><div class="line">&#125;, function(err, results) &#123;</div><div class="line">    console.log(&apos;err = &apos;, err);</div><div class="line">    console.log(&apos;results = &apos;, results);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>11queue(worker, concurrency);</p>
+<p>queue相当于一个加强版的parallel，主要是限制了worker数量，不再一次性全部执行。当worker数量不够用时，新加入的任务将会排队等候，直到有新的worker可用。</p>
+<p>它有多个点可供回调，如无等候任务时(empty)、全部执行完时(drain)等。</p>
+<p>示例：定义一个queue，其worker数量为2：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"> var q = async.queue(function(task, callback) &#123;</div><div class="line">    console.log(&apos;worker is processing task: &apos;, task.name);</div><div class="line">    callback();</div><div class="line">&#125;, 2);</div><div class="line">q.push(&#123;name: &apos;foo&apos;&#125;, function (err) &#123;</div><div class="line">    console.log(&apos;finished processing foo&apos;);</div><div class="line">&#125;);</div><div class="line">q.push(&#123;name: &apos;bar&apos;&#125;, function (err) &#123;</div><div class="line">    console.log(&apos;finished processing bar&apos;);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">//当最后一个任务交给worker执行时，会调用empty函数:</div><div class="line"></div><div class="line">q.empty = function() &#123;</div><div class="line">    console.log(&apos;no more tasks wating&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li>apply是一个非常好用的函数，可以让我们给一个函数预绑定多个参数并生成一个可直接调用的新函数，简化代码</li>
+</ol>
+<ol>
+<li>iterator(tasks)<br>将一组函数包装成为一个iterator，可通过next()得到以下一个函数为起点的新的iterator。</li>
+</ol>
+
+  </section>
+
+  
+
+<section class="post-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'letian'; 
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+  
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
