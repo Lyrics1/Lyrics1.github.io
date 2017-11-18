@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      react组件之间传递信息 | Lyrics 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="ZF">
+    
+    
+
+    <meta name="description" content="要理解组件直接的信息传递，必须了解以下知识，这样才能更好理解state react Component 中 state 是属于自己组件私有的状态属性(可以修改）   设置state   123this.state= &amp;#123;	content:&amp;apos;&amp;apos;&amp;#125;  修改state  123this.setState(&amp;#123;	content:event.target.val">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react组件之间传递信息 | Lyrics">
+<meta property="og:url" content="https://lyrics1.github.io/2017/11/18/react组件之间传递信息/index.html">
+<meta property="og:site_name" content="Lyrics">
+<meta property="og:description" content="要理解组件直接的信息传递，必须了解以下知识，这样才能更好理解state react Component 中 state 是属于自己组件私有的状态属性(可以修改）   设置state   123this.state= &amp;#123;	content:&amp;apos;&amp;apos;&amp;#125;  修改state  123this.setState(&amp;#123;	content:event.target.val">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-11-18T05:47:05.337Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="react组件之间传递信息 | Lyrics">
+<meta name="twitter:description" content="要理解组件直接的信息传递，必须了解以下知识，这样才能更好理解state react Component 中 state 是属于自己组件私有的状态属性(可以修改）   设置state   123this.state= &amp;#123;	content:&amp;apos;&amp;apos;&amp;#125;  修改state  123this.setState(&amp;#123;	content:event.target.val">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Lyrics</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          &lt; More and better /&gt;
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+                
+                <li class="navigation__item"><a href="https://github.com/Lyrics1" title="" class="">github</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">react组件之间传递信息</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2017-11-18" class="post-meta__date date">2017-11-18</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h3 id="要理解组件直接的信息传递，必须了解以下知识，这样才能更好理解"><a href="#要理解组件直接的信息传递，必须了解以下知识，这样才能更好理解" class="headerlink" title="要理解组件直接的信息传递，必须了解以下知识，这样才能更好理解"></a>要理解组件直接的信息传递，必须了解以下知识，这样才能更好理解</h3><h4 id="state"><a href="#state" class="headerlink" title="state"></a>state</h4><ol>
+<li>react Component 中 state 是属于自己组件私有的状态属性(可以修改）</li>
+</ol>
+<blockquote>
+<p>设置state </p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">this.state= &#123;</div><div class="line">	content:&apos;&apos;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>修改state</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">this.setState(&#123;</div><div class="line">	content:event.target.value</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h3 id="props"><a href="#props" class="headerlink" title="props"></a>props</h3><ol>
+<li>props 是属于可以传递在组件之间的属性（不可修改），不是属于自己去设置的，是通过组件之间传递的</li>
+</ol>
+<h3 id="父组件传递给子组件"><a href="#父组件传递给子组件" class="headerlink" title="父组件传递给子组件"></a>父组件传递给子组件</h3><blockquote>
+<p>父组件传递方法</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;MarkDown content =&#123;this.state&#125;/&gt;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>子组件接收方法</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div&gt;</div><div class="line">	&#123;this.props.content&#125;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<h3 id="子组件传递给父组件"><a href="#子组件传递给父组件" class="headerlink" title="子组件传递给父组件"></a>子组件传递给父组件</h3><blockquote>
+<p>自己的理解 :类似于 触发事件然后调用props 传递的函数，将所要传递的东西通过函数的参数传递</p>
+<p>父组件接收的方法</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;Edit  onChange=&#123;this.handleChange.bind(this)&#125;/&gt;</div><div class="line"></div><div class="line">handleChange(value)&#123;</div><div class="line"></div><div class="line">		this.setState(&#123;</div><div class="line">			content:marked(value) </div><div class="line">		&#125;)</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>子组件传递方法</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">&lt;textarea name=&quot;Edits&quot; id=&quot;Edits&quot;  value=&#123;this.state.content&#125; 	onChange=&#123;this.handleChange&#125; /&gt;</div><div class="line"></div><div class="line">	handleChange(event)&#123;</div><div class="line">		this.setState(&#123;</div><div class="line">			content:event.target.value</div><div class="line">		&#125;)</div><div class="line">		if(this.props.onChange)&#123;</div><div class="line">			this.props.onChange(event.target.value)</div><div class="line">			</div><div class="line">		&#125;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>这是最基础的数据在组件之间的传递，但是这也是最应该掌握的！</p>
+</blockquote>
+<h3 id="Fighting-END"><a href="#Fighting-END" class="headerlink" title="Fighting!  END"></a>Fighting!  END</h3>
+  </section>
+
+  
+
+<section class="post-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'letian'; 
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+  
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
