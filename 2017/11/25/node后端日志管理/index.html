@@ -7,7 +7,7 @@
     
 
     <title>
-      归档 
+      node后端日志管理 | Lyrics 
     </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -16,14 +16,17 @@
     
     
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="归档">
-<meta property="og:url" content="https://lyrics1.github.io/archive/index.html">
+    <meta name="description" content="需求 ：在控制台上记录用户的每个动作不知道您是否有后端的开发经验，后端一般会有记录访问日志的中间件例如，在 Express 中实现一个简单的 Logger 如下： 12345678var loggerMiddleware = function(req, res, next) &amp;#123;  console.log(&amp;apos;[Logger]&amp;apos;, req.method, req.orig">
+<meta property="og:type" content="article">
+<meta property="og:title" content="node后端日志管理 | Lyrics">
+<meta property="og:url" content="https://lyrics1.github.io/2017/11/25/node后端日志管理/index.html">
 <meta property="og:site_name" content="Lyrics">
+<meta property="og:description" content="需求 ：在控制台上记录用户的每个动作不知道您是否有后端的开发经验，后端一般会有记录访问日志的中间件例如，在 Express 中实现一个简单的 Logger 如下： 12345678var loggerMiddleware = function(req, res, next) &amp;#123;  console.log(&amp;apos;[Logger]&amp;apos;, req.method, req.orig">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2016-10-18T13:34:20.279Z">
+<meta property="og:updated_time" content="2017-11-25T08:27:32.284Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="归档">
+<meta name="twitter:title" content="node后端日志管理 | Lyrics">
+<meta name="twitter:description" content="需求 ：在控制台上记录用户的每个动作不知道您是否有后端的开发经验，后端一般会有记录访问日志的中间件例如，在 Express 中实现一个简单的 Logger 如下： 12345678var loggerMiddleware = function(req, res, next) &amp;#123;  console.log(&amp;apos;[Logger]&amp;apos;, req.method, req.orig">
     
     
     
@@ -152,31 +155,54 @@ classes that you can use:
 
   <header class="post-header">
     
-    <h1 class="post-title">归档</h1>
+    <h1 class="post-title">node后端日志管理</h1>
 
-    <section id="post-content" class="article-content post">
-        
-    </section>
+    
 
+    <div class="post-meta">
+      <time datetime="2017-11-25" class="post-meta__date date">2017-11-25</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
 
   </header>
 
+  <section id="post-content" class="article-content post">
+    <h3 id="需求-：在控制台上记录用户的每个动作"><a href="#需求-：在控制台上记录用户的每个动作" class="headerlink" title="需求 ：在控制台上记录用户的每个动作"></a>需求 ：在控制台上记录用户的每个动作</h3><p>不知道您是否有后端的开发经验，后端一般会有记录访问日志的中间件<br>例如，在 Express 中实现一个简单的 Logger 如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var loggerMiddleware = function(req, res, next) &#123;</div><div class="line">  console.log(&apos;[Logger]&apos;, req.method, req.originalUrl)</div><div class="line">  next()</div><div class="line">&#125;</div><div class="line">...</div><div class="line">app.use(loggerMiddleware)</div><div class="line"></div><div class="line">`</div></pre></td></tr></table></figure>
+<p>每次访问的时候，都会在控制台中留下类似下面的日志便于追踪调试：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[Logger] GET  /</div><div class="line">[Logger] POST /login</div><div class="line">[Logger] GET  /user?uid=10086</div><div class="line">...</div></pre></td></tr></table></figure></p>
+
+  </section>
+
+  
+
+<section class="post-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'letian'; 
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+  
 </article>
 
-<div class="archive-meta">
 
-
-
-
-
-
-    <h3>归档</h3>
-    <div class="archiveslist">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">3</span></li></ul>
-    </div>
-
-
-</div>
             <footer class="footer">
 
     <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
@@ -204,6 +230,18 @@ classes that you can use:
 
 
     
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
     
     
     <!--kill ie6 -->
