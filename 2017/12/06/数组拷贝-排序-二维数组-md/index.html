@@ -7,7 +7,7 @@
     
 
     <title>
-      websocket | Lyrics 
+      数组拷贝 排序 二维数组.md | Lyrics 
     </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -16,17 +16,17 @@
     
     
 
-    <meta name="description" content="客户端emitemit(“事件名”,”要发送的数据”,回调函数） 用来发射一个事件或者说触发一个事件，第一个参数为事件名，第二个参数为要发送的数据， 第三个参数为回调函数（一般省略，如需对方接受到信息后立即得到确认时，则需要用到回调函数）。 onon(“要监听的事件名”,(“接收的数据”，要返回的函数 ))用来监听一个 emit 发射的事件，第一个参数为要监听的事件名，第二个参数为一个匿名函数用来">
+    <meta name="description" content="数组拷贝 System中的一个静态方法。  public static native void arraycopy(Object src, int  srcPos,  Object  dest,  int  destPos,  int  length);  参数解释：     src:  源数组 ​                 srcPos:  源数组的起始位置              ​">
 <meta property="og:type" content="article">
-<meta property="og:title" content="websocket | Lyrics">
-<meta property="og:url" content="https://lyrics1.github.io/2017/11/28/websocket-1/index.html">
+<meta property="og:title" content="数组拷贝 排序 二维数组.md | Lyrics">
+<meta property="og:url" content="https://lyrics1.github.io/2017/12/06/数组拷贝-排序-二维数组-md/index.html">
 <meta property="og:site_name" content="Lyrics">
-<meta property="og:description" content="客户端emitemit(“事件名”,”要发送的数据”,回调函数） 用来发射一个事件或者说触发一个事件，第一个参数为事件名，第二个参数为要发送的数据， 第三个参数为回调函数（一般省略，如需对方接受到信息后立即得到确认时，则需要用到回调函数）。 onon(“要监听的事件名”,(“接收的数据”，要返回的函数 ))用来监听一个 emit 发射的事件，第一个参数为要监听的事件名，第二个参数为一个匿名函数用来">
+<meta property="og:description" content="数组拷贝 System中的一个静态方法。  public static native void arraycopy(Object src, int  srcPos,  Object  dest,  int  destPos,  int  length);  参数解释：     src:  源数组 ​                 srcPos:  源数组的起始位置              ​">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-04T06:16:25.876Z">
+<meta property="og:updated_time" content="2017-12-06T05:44:34.159Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="websocket | Lyrics">
-<meta name="twitter:description" content="客户端emitemit(“事件名”,”要发送的数据”,回调函数） 用来发射一个事件或者说触发一个事件，第一个参数为事件名，第二个参数为要发送的数据， 第三个参数为回调函数（一般省略，如需对方接受到信息后立即得到确认时，则需要用到回调函数）。 onon(“要监听的事件名”,(“接收的数据”，要返回的函数 ))用来监听一个 emit 发射的事件，第一个参数为要监听的事件名，第二个参数为一个匿名函数用来">
+<meta name="twitter:title" content="数组拷贝 排序 二维数组.md | Lyrics">
+<meta name="twitter:description" content="数组拷贝 System中的一个静态方法。  public static native void arraycopy(Object src, int  srcPos,  Object  dest,  int  destPos,  int  length);  参数解释：     src:  源数组 ​                 srcPos:  源数组的起始位置              ​">
     
     
     
@@ -155,12 +155,12 @@ classes that you can use:
 
   <header class="post-header">
     
-    <h1 class="post-title">websocket</h1>
+    <h1 class="post-title">数组拷贝 排序 二维数组.md</h1>
 
     
 
     <div class="post-meta">
-      <time datetime="2017-11-28" class="post-meta__date date">2017-11-28</time> 
+      <time datetime="2017-12-06" class="post-meta__date date">2017-12-06</time> 
 
       <span class="post-meta__tags tags">
 
@@ -176,22 +176,76 @@ classes that you can use:
   </header>
 
   <section id="post-content" class="article-content post">
-    <h2 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h2><h3 id="emit"><a href="#emit" class="headerlink" title="emit"></a>emit</h3><p>emit(“事件名”,”要发送的数据”,回调函数）</p>
-<p>用来发射一个事件或者说触发一个事件，第一个参数为事件名，第二个参数为要发送的数据，</p>
-<p>第三个参数为回调函数（一般省略，如需对方接受到信息后立即得到确认时，则需要用到回调函数）。</p>
-<h3 id="on"><a href="#on" class="headerlink" title="on"></a>on</h3><p>on(“要监听的事件名”,(“接收的数据”，要返回的函数 ))<br>用来监听一个 emit 发射的事件，第一个参数为要监听的事件名，第二个参数为一个匿名函数用来接收对方发来的数据</p>
-<p>该匿名函数的第一个参数为接收的数据，若有第二个参数，则为要返回的函数。</p>
-<p>socket.io 提供了三种默认的事件（客户端和服务器都有）：connect 、message 、disconnect </p>
-<p>当与对方建立连接后自动触发 connect 事件，当收到对方发来的数据后触发 message 事件（通常为 socket.send() 触发）</p>
-<p>当对方关闭连接后触发 disconnect 事件。</p>
-<h2 id="服务器端"><a href="#服务器端" class="headerlink" title="服务器端"></a>服务器端</h2><ol>
-<li><p>socket.emit() ：向建立该连接的客户端广播</p>
+    <h3 id="数组拷贝"><a href="#数组拷贝" class="headerlink" title="数组拷贝"></a>数组拷贝</h3><ul>
+<li><p>System中的一个静态方法。</p>
 </li>
-<li><p>socket.broadcast.emit() ：向除去建立该连接的客户端的所有客户端广播</p>
+<li><p>public static native void arraycopy(Object src, int  srcPos,  Object  dest,  int  destPos,  int  length);</p>
 </li>
-<li><p>io.sockets.emit() ：向所有客户端广播，等同于上面两个的和</p>
+<li><p>参数解释：     src:  源数组</p>
+<p>​                 srcPos:  源数组的起始位置             </p>
+<p>​            dest:  目标数组    </p>
+<pre><code>destPos:目标数组的起始位置     
+</code></pre><p>​            length:拷贝的数组元素个数</p>
 </li>
+</ul>
+<h3 id="排序算法（以下均为部分代码段）"><a href="#排序算法（以下均为部分代码段）" class="headerlink" title="排序算法（以下均为部分代码段）"></a>排序算法（以下均为部分代码段）</h3><ol>
+<li><p>冒泡排序</p>
+<p> public static void sort(Comparable[] a){</p>
+<pre><code>for (int i=1; i&lt;=a.length; i++) {
+    boolean flag = true;
+    for (int j=0; j&lt;a.length-i; j++) {
+        if (a[j]&gt;a[j+1]) {
+            exchange(a[j],a[j+1]);
+        }
+    }
+}
+</code></pre><p> }</p>
+</li>
+<li><p>插入排序</p>
+<p> public static void sort(Comparable[] a){</p>
+<pre><code>for (int i=1; i&lt;a.length; i++) {
+    boolean flag = true;
+    for (int j=i; j&gt;0 &amp;&amp; a[j]&lt;a[j-1]; j--) {
+        exchange(a[j],a[j-1]);
+    }
+}
+</code></pre><p> }</p>
+</li>
+<li><p>快速排序</p>
+<p> public static void sort(Comparable[] a, int start, int end){</p>
+<pre><code>if (end&lt;=start) {
+    return;
+}
+int j = partition(a, start, end);  //切分
+sort(a, start ,j-1);
+sort(a, j+1,end);
+</code></pre><p> }</p>
+<p> private static int partition(Comparable[] a, int start, int end){</p>
+<pre><code>int i = start, j = end+1;  //左右扫描指针
+Comparable v = a[start];  //切分元素
+while(true){
+    while(a[++i]&lt;v) if(i==end) break;
+    while(v&lt;a[--j]) if(j==start) break;
+    if(i&gt;=j) break;
+    exchange(i,j);
+    return
+}
+</code></pre><p> }</p>
+<h3 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h3></li>
 </ol>
+<ul>
+<li><code>数据类型[][]组名称=new 数据类型[行的个数][列的个数];</code></li>
+</ul>
+<h4 id="注意：二维数组的length属性就是它所包含的“行的个数”。"><a href="#注意：二维数组的length属性就是它所包含的“行的个数”。" class="headerlink" title="注意：二维数组的length属性就是它所包含的“行的个数”。"></a>注意：二维数组的length属性就是它所包含的“行的个数”。</h4><ul>
+<li><p>访问语法：数组名称<code>[行的索引][列的索引]</code></p>
+</li>
+<li><p>静态初始化：<code>数据类型[][] 数组名称={</code></p>
+<p>​                {元素1，元素2……}，</p>
+<p>​                {元素1，元素2……}，</p>
+<p>​                ……</p>
+<p>​                }；</p>
+</li>
+</ul>
 
   </section>
 

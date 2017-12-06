@@ -7,7 +7,7 @@
     
 
     <title>
-      websocket | Lyrics 
+      方法 递归 数组.md | Lyrics 
     </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -16,17 +16,17 @@
     
     
 
-    <meta name="description" content="客户端emitemit(“事件名”,”要发送的数据”,回调函数） 用来发射一个事件或者说触发一个事件，第一个参数为事件名，第二个参数为要发送的数据， 第三个参数为回调函数（一般省略，如需对方接受到信息后立即得到确认时，则需要用到回调函数）。 onon(“要监听的事件名”,(“接收的数据”，要返回的函数 ))用来监听一个 emit 发射的事件，第一个参数为要监听的事件名，第二个参数为一个匿名函数用来">
+    <meta name="description" content="方法（函数） 定义：一段用来完成特定功能的代码片段。  格式：[修饰符1 修饰符2 …] 返回值类型 方法名(形式参数列表){ 程序代码; [return 返回值]; }  方法可以有参，也可以无参，参数分两种：形参和实参。  传递的参数是值副本，如果是引用类型则副本存放的是参数地址。  调用方法：直接调用、类名调用和对象调用。   递归算法 定义：递归调用指的是方法执行过程中出现该方法本身的调用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="websocket | Lyrics">
-<meta property="og:url" content="https://lyrics1.github.io/2017/11/28/websocket-1/index.html">
+<meta property="og:title" content="方法 递归 数组.md | Lyrics">
+<meta property="og:url" content="https://lyrics1.github.io/2017/12/06/方法-递归-数组-md/index.html">
 <meta property="og:site_name" content="Lyrics">
-<meta property="og:description" content="客户端emitemit(“事件名”,”要发送的数据”,回调函数） 用来发射一个事件或者说触发一个事件，第一个参数为事件名，第二个参数为要发送的数据， 第三个参数为回调函数（一般省略，如需对方接受到信息后立即得到确认时，则需要用到回调函数）。 onon(“要监听的事件名”,(“接收的数据”，要返回的函数 ))用来监听一个 emit 发射的事件，第一个参数为要监听的事件名，第二个参数为一个匿名函数用来">
+<meta property="og:description" content="方法（函数） 定义：一段用来完成特定功能的代码片段。  格式：[修饰符1 修饰符2 …] 返回值类型 方法名(形式参数列表){ 程序代码; [return 返回值]; }  方法可以有参，也可以无参，参数分两种：形参和实参。  传递的参数是值副本，如果是引用类型则副本存放的是参数地址。  调用方法：直接调用、类名调用和对象调用。   递归算法 定义：递归调用指的是方法执行过程中出现该方法本身的调用">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-04T06:16:25.876Z">
+<meta property="og:updated_time" content="2017-12-06T05:44:13.642Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="websocket | Lyrics">
-<meta name="twitter:description" content="客户端emitemit(“事件名”,”要发送的数据”,回调函数） 用来发射一个事件或者说触发一个事件，第一个参数为事件名，第二个参数为要发送的数据， 第三个参数为回调函数（一般省略，如需对方接受到信息后立即得到确认时，则需要用到回调函数）。 onon(“要监听的事件名”,(“接收的数据”，要返回的函数 ))用来监听一个 emit 发射的事件，第一个参数为要监听的事件名，第二个参数为一个匿名函数用来">
+<meta name="twitter:title" content="方法 递归 数组.md | Lyrics">
+<meta name="twitter:description" content="方法（函数） 定义：一段用来完成特定功能的代码片段。  格式：[修饰符1 修饰符2 …] 返回值类型 方法名(形式参数列表){ 程序代码; [return 返回值]; }  方法可以有参，也可以无参，参数分两种：形参和实参。  传递的参数是值副本，如果是引用类型则副本存放的是参数地址。  调用方法：直接调用、类名调用和对象调用。   递归算法 定义：递归调用指的是方法执行过程中出现该方法本身的调用">
     
     
     
@@ -155,12 +155,12 @@ classes that you can use:
 
   <header class="post-header">
     
-    <h1 class="post-title">websocket</h1>
+    <h1 class="post-title">方法 递归 数组.md</h1>
 
     
 
     <div class="post-meta">
-      <time datetime="2017-11-28" class="post-meta__date date">2017-11-28</time> 
+      <time datetime="2017-12-06" class="post-meta__date date">2017-12-06</time> 
 
       <span class="post-meta__tags tags">
 
@@ -176,23 +176,40 @@ classes that you can use:
   </header>
 
   <section id="post-content" class="article-content post">
-    <h2 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h2><h3 id="emit"><a href="#emit" class="headerlink" title="emit"></a>emit</h3><p>emit(“事件名”,”要发送的数据”,回调函数）</p>
-<p>用来发射一个事件或者说触发一个事件，第一个参数为事件名，第二个参数为要发送的数据，</p>
-<p>第三个参数为回调函数（一般省略，如需对方接受到信息后立即得到确认时，则需要用到回调函数）。</p>
-<h3 id="on"><a href="#on" class="headerlink" title="on"></a>on</h3><p>on(“要监听的事件名”,(“接收的数据”，要返回的函数 ))<br>用来监听一个 emit 发射的事件，第一个参数为要监听的事件名，第二个参数为一个匿名函数用来接收对方发来的数据</p>
-<p>该匿名函数的第一个参数为接收的数据，若有第二个参数，则为要返回的函数。</p>
-<p>socket.io 提供了三种默认的事件（客户端和服务器都有）：connect 、message 、disconnect </p>
-<p>当与对方建立连接后自动触发 connect 事件，当收到对方发来的数据后触发 message 事件（通常为 socket.send() 触发）</p>
-<p>当对方关闭连接后触发 disconnect 事件。</p>
-<h2 id="服务器端"><a href="#服务器端" class="headerlink" title="服务器端"></a>服务器端</h2><ol>
-<li><p>socket.emit() ：向建立该连接的客户端广播</p>
+    <h3 id="方法（函数）"><a href="#方法（函数）" class="headerlink" title="方法（函数）"></a>方法（函数）</h3><ul>
+<li><p>定义：一段用来完成特定功能的代码片段。</p>
 </li>
-<li><p>socket.broadcast.emit() ：向除去建立该连接的客户端的所有客户端广播</p>
+<li><p>格式：[修饰符1 修饰符2 …] 返回值类型 方法名(形式参数列表){</p>
+<p>程序代码;</p>
+<p>[return 返回值];</p>
+<p>}</p>
 </li>
-<li><p>io.sockets.emit() ：向所有客户端广播，等同于上面两个的和</p>
+<li><p>方法可以有参，也可以无参，参数分两种：形参和实参。</p>
 </li>
-</ol>
-
+<li><p>传递的参数是值副本，如果是引用类型则副本存放的是参数地址。</p>
+</li>
+<li><p>调用方法：直接调用、类名调用和对象调用。</p>
+</li>
+</ul>
+<h3 id="递归算法"><a href="#递归算法" class="headerlink" title="递归算法"></a>递归算法</h3><ul>
+<li>定义：递归调用指的是方法执行过程中出现该方法本身的调用。</li>
+<li>条件：有出口即结束条件，逐层递推必须要向出口逼近。</li>
+</ul>
+<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><ul>
+<li>定义：数组是一个变量，存储相同数据类型的一组数据。</li>
+<li>声明数组的方式：</li>
+</ul>
+<p><code>int[] score;</code>  </p>
+<p><code>int score2 [];</code></p>
+<p><code>String[] name;</code></p>
+<ul>
+<li>分配空间：数据类型[] 数组名 = new 数据类型(大小)；</li>
+</ul>
+<h3 id="方法的可变参数"><a href="#方法的可变参数" class="headerlink" title="方法的可变参数"></a>方法的可变参数</h3><ul>
+<li>在JDK1.5后引入的概念，即方法中可接收的参数不再是固定的，而是可以根据需要传递数量不等的参数个数。</li>
+<li>格式： 返回值类型  方法名称 （类型…  参数名称）{ </li>
+</ul>
+<h4 id="注意：向方法传递可变参数后，参数在方法内部是以数组的形式保存下来的。"><a href="#注意：向方法传递可变参数后，参数在方法内部是以数组的形式保存下来的。" class="headerlink" title="注意：向方法传递可变参数后，参数在方法内部是以数组的形式保存下来的。"></a>注意：向方法传递可变参数后，参数在方法内部是以数组的形式保存下来的。</h4>
   </section>
 
   
