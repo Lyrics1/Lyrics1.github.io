@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      css浮动和BFC | Lyrics 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="ZF">
+    
+    
+
+    <meta name="description" content="开始总结知识体系，下面是个人理解  float 设置float 的box 会脱离文档流，但是内部的元素不会脱离文档流，这就是为什么会产生文字围绕图片的效果。  设置float的元素会产生一个块级框（无论会计元素还是行内元素),都可设置宽和高。  浮动元素相对的位置是相对父元素的框(包含内边框），和上一个浮动元素的位置相对浮动。  浮动元素会造成父元素的内容的塌陷  如果浮动元素的父元素也是浮动元">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css浮动和BFC | Lyrics">
+<meta property="og:url" content="https://lyrics1.github.io/2017/12/10/css浮动和BFC/index.html">
+<meta property="og:site_name" content="Lyrics">
+<meta property="og:description" content="开始总结知识体系，下面是个人理解  float 设置float 的box 会脱离文档流，但是内部的元素不会脱离文档流，这就是为什么会产生文字围绕图片的效果。  设置float的元素会产生一个块级框（无论会计元素还是行内元素),都可设置宽和高。  浮动元素相对的位置是相对父元素的框(包含内边框），和上一个浮动元素的位置相对浮动。  浮动元素会造成父元素的内容的塌陷  如果浮动元素的父元素也是浮动元">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-12-10T04:44:22.190Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="css浮动和BFC | Lyrics">
+<meta name="twitter:description" content="开始总结知识体系，下面是个人理解  float 设置float 的box 会脱离文档流，但是内部的元素不会脱离文档流，这就是为什么会产生文字围绕图片的效果。  设置float的元素会产生一个块级框（无论会计元素还是行内元素),都可设置宽和高。  浮动元素相对的位置是相对父元素的框(包含内边框），和上一个浮动元素的位置相对浮动。  浮动元素会造成父元素的内容的塌陷  如果浮动元素的父元素也是浮动元">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Lyrics</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          &lt; More and better /&gt;
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+                
+                <li class="navigation__item"><a href="https://github.com/Lyrics1" title="" class="">github</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">css浮动和BFC</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2017-12-10" class="post-meta__date date">2017-12-10</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <blockquote>
+<p>开始总结知识体系，下面是个人理解</p>
+</blockquote>
+<h2 id="float"><a href="#float" class="headerlink" title="float"></a>float</h2><ul>
+<li><p>设置float 的box 会脱离文档流，但是内部的元素不会脱离文档流，这就是为什么会产生文字围绕图片的效果。</p>
+</li>
+<li><p>设置float的元素会产生一个块级框（无论会计元素还是行内元素),都可设置宽和高。</p>
+</li>
+<li><p>浮动元素相对的位置是相对父元素的框(包含内边框），和上一个浮动元素的位置相对浮动。</p>
+</li>
+<li><p>浮动元素会造成父元素的内容的塌陷</p>
+</li>
+<li><p>如果浮动元素的父元素也是浮动元素，则不会产生塌陷</p>
+</li>
+</ul>
+<h3 id="clear"><a href="#clear" class="headerlink" title="clear"></a>clear</h3><ol>
+<li><p>在浮动元素之后添加元素，设置clear 属性。</p>
+<ul>
+<li><p>直接添加元素法</p>
+</li>
+<li><p>伪元素 :after /:befor {content:””,cisibility:hidden,dispay:block,clear:blth,height:}</p>
+</li>
+</ul>
+</li>
+<li><p>父元素闭合浮动</p>
+<ul>
+<li><p>父元素设置 overflow :hidden /auto;</p>
+</li>
+<li><p>原理 触发了</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="BFC-Block-formatting-contexts）-（块级格式化上下文）"><a href="#BFC-Block-formatting-contexts）-（块级格式化上下文）" class="headerlink" title="BFC ( Block formatting contexts） （块级格式化上下文）"></a>BFC ( Block formatting contexts） （块级格式化上下文）</h2><blockquote>
+<p>BFC中的元素的布局是不受外界的影响（我们往往利用这个特性来消除浮动元素对其非浮动的兄弟元素和其子元素带来的影响。</p>
+<p>浮动和绝对定位不与任何元素产生 margin 折叠</p>
+</blockquote>
+<p>原因：浮动元素和绝对定位元素不与其他盒子产生外边距折叠是因为元素会脱离当前的文档流，两个margin不是邻接的条件，又因为浮动和绝对定位会使元素为它的内容创建新的BFC，因此该元素和子元素所处的BFC是不相同的，因此也不会产生margin的折叠。</p>
+<h3 id="触发条件："><a href="#触发条件：" class="headerlink" title="触发条件："></a>触发条件：</h3><ol>
+<li><p>float 除了none 以外的值</p>
+</li>
+<li><p>overflow :除了visiable 以外</p>
+</li>
+<li><p>position为 absolute,fixed</p>
+</li>
+<li><p>display:为table-cell,table-caption,inline-block</p>
+</li>
+</ol>
+<p>不过还是有一点要注意： display:table 本身不会创建BFC，但是会产生匿名框，匿名框会产生BFC，所以害死会产生BFC </p>
+<h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><ol>
+<li><p>防止外边距塌陷（如果两个框属于一块级化上下文，会产生外边距叠加，可以设置BFC来阻止外边距的叠加，</p>
+<p> 外边距叠加:<strong> 相邻 </strong> 的外边距都是正数，则区较大的，都为负值，取绝对值较大的，一正一负，两者相加。</p>
+</li>
+<li><p>不会重叠浮动元素</p>
+</li>
+</ol>
+<p>参考文档： <a href="http://www.iyunlu.com/view/css-xhtml/55.html" target="_blank" rel="external">css Float/BFC</a></p>
+<pre><code>[深入理解BFC](https://www.w3cplus.com/css/understanding-bfc-and-margin-collapse.html)
+</code></pre>
+  </section>
+
+  
+
+<section class="post-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'letian'; 
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+  
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
