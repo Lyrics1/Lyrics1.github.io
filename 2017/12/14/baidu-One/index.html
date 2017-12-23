@@ -16,17 +16,17 @@
     
     
 
-    <meta name="description" content="面试官小姐姐很好，就是自己有点紧张，而且基础只是忘得有些多 赶紧来总结一下   原型链  原型里面有两个比较重要的东西，对象所拥有的  proto  属性，函数对象所拥有的 prototype 属性，实例对象的prpto属性指向原型对象，也就是指向   函数的prototype 对象，实例对象和原型对象之间是一种关联关系，实例对象查找属性的时候会先自身的属性中进行查找，找不到才会从实例的原型对象">
+    <meta name="description" content="面试官小姐姐很好，就是自己有点紧张，而且基础只是忘得有些多 赶紧来总结一下  . 原型链原型里面有两个比较重要的东西，对象所拥有的 __ proto __ 属性，函数对象所拥有的 prototype 属性，实例对象的__prpto__属性指向原型对象，也就是指向 函数的prototype 对象，实例对象和原型对象之间是一种关联关系，实例对象查找属性的时候会先自身的属性中进行查找，找不到才会从实例">
 <meta property="og:type" content="article">
 <meta property="og:title" content="baidu One | Lyrics">
 <meta property="og:url" content="https://lyrics1.github.io/2017/12/14/baidu-One/index.html">
 <meta property="og:site_name" content="Lyrics">
-<meta property="og:description" content="面试官小姐姐很好，就是自己有点紧张，而且基础只是忘得有些多 赶紧来总结一下   原型链  原型里面有两个比较重要的东西，对象所拥有的  proto  属性，函数对象所拥有的 prototype 属性，实例对象的prpto属性指向原型对象，也就是指向   函数的prototype 对象，实例对象和原型对象之间是一种关联关系，实例对象查找属性的时候会先自身的属性中进行查找，找不到才会从实例的原型对象">
+<meta property="og:description" content="面试官小姐姐很好，就是自己有点紧张，而且基础只是忘得有些多 赶紧来总结一下  . 原型链原型里面有两个比较重要的东西，对象所拥有的 __ proto __ 属性，函数对象所拥有的 prototype 属性，实例对象的__prpto__属性指向原型对象，也就是指向 函数的prototype 对象，实例对象和原型对象之间是一种关联关系，实例对象查找属性的时候会先自身的属性中进行查找，找不到才会从实例">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-19T09:36:59.096Z">
+<meta property="og:updated_time" content="2017-12-23T13:36:28.043Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="baidu One | Lyrics">
-<meta name="twitter:description" content="面试官小姐姐很好，就是自己有点紧张，而且基础只是忘得有些多 赶紧来总结一下   原型链  原型里面有两个比较重要的东西，对象所拥有的  proto  属性，函数对象所拥有的 prototype 属性，实例对象的prpto属性指向原型对象，也就是指向   函数的prototype 对象，实例对象和原型对象之间是一种关联关系，实例对象查找属性的时候会先自身的属性中进行查找，找不到才会从实例的原型对象">
+<meta name="twitter:description" content="面试官小姐姐很好，就是自己有点紧张，而且基础只是忘得有些多 赶紧来总结一下  . 原型链原型里面有两个比较重要的东西，对象所拥有的 __ proto __ 属性，函数对象所拥有的 prototype 属性，实例对象的__prpto__属性指向原型对象，也就是指向 函数的prototype 对象，实例对象和原型对象之间是一种关联关系，实例对象查找属性的时候会先自身的属性中进行查找，找不到才会从实例">
     
     
     
@@ -180,35 +180,18 @@ classes that you can use:
 <p>面试官小姐姐很好，就是自己有点紧张，而且基础只是忘得有些多</p>
 <p>赶紧来总结一下</p>
 </blockquote>
-<ol>
-<li><p>原型链</p>
-<p> 原型里面有两个比较重要的东西，对象所拥有的 <strong> proto </strong> 属性，函数对象所拥有的 prototype 属性，实例对象的<strong>prpto</strong>属性指向原型对象，也就是指向</p>
-</li>
-</ol>
-<p>函数的prototype 对象，实例对象和原型对象之间是一种关联关系，实例对象查找属性的时候会先自身的属性中进行查找，找不到才会从实例的原型对象中找。</p>
+<h3 id="原型链"><a href="#原型链" class="headerlink" title=". 原型链"></a>. 原型链</h3><pre><code>原型里面有两个比较重要的东西，对象所拥有的 __ proto __ 属性，函数对象所拥有的 prototype 属性，实例对象的__prpto__属性指向原型对象，也就是指向
+</code></pre><p>函数的prototype 对象，实例对象和原型对象之间是一种关联关系，实例对象查找属性的时候会先自身的属性中进行查找，找不到才会从实例的原型对象中找。</p>
 <p>实例对象 –&gt; 原型对象 –&gt; 原型对象 构成了原型链</p>
-<ol>
-<li><p>事件冒泡(由内往外）和事件捕获 (由外往内）</p>
-<p> 事件冒泡是从内往外进行扩散，是从事件目标开始往上冒泡到页面的最上一级标签。</p>
-<p> 事件捕获是在最上一级标签开始往下查找，直到捕获到事件目标。</p>
-<p>阻止事件冒泡 ： e.stopPropagation();<br>阻止默认事件 ：e.preventefault();</p>
-</li>
-<li><p>css 选择器 </p>
-<p> ID 选择器 &gt; 类选择器 = 属性选择器a[href=”segmentfault.com”]{} &gt; 伪类选择器 &gt; 标签选择器 &gt; = 伪元素选择器</p>
-</li>
-</ol>
-<ol>
-<li>css 样式的优先级 (忘了，而且我自己把内嵌和内联搞混了）</li>
-</ol>
-<p>内联（在元素内部） 》 内嵌（style) 》 外联</p>
+<h3 id="事件冒泡-由内往外）和事件捕获-由外往内）"><a href="#事件冒泡-由内往外）和事件捕获-由外往内）" class="headerlink" title=". 事件冒泡(由内往外）和事件捕获 (由外往内）"></a>. 事件冒泡(由内往外）和事件捕获 (由外往内）</h3><pre><code>事件冒泡是从内往外进行扩散，是从事件目标开始往上冒泡到页面的最上一级标签。
+
+事件捕获是在最上一级标签开始往下查找，直到捕获到事件目标。
+</code></pre><p> 阻止事件冒泡 ： e.stopPropagation();<br> 阻止默认事件 ：e.preventefault();</p>
+<h3 id="css-选择器"><a href="#css-选择器" class="headerlink" title="css 选择器"></a>css 选择器</h3><pre><code>ID 选择器 &gt; 类选择器 = 属性选择器a[href=&quot;segmentfault.com&quot;]{} &gt; 伪类选择器 &gt; 标签选择器 &gt; = 伪元素选择器
+</code></pre><h3 id="css-样式的优先级-忘了，而且我自己把内嵌和内联搞混了）"><a href="#css-样式的优先级-忘了，而且我自己把内嵌和内联搞混了）" class="headerlink" title="css 样式的优先级 (忘了，而且我自己把内嵌和内联搞混了）"></a>css 样式的优先级 (忘了，而且我自己把内嵌和内联搞混了）</h3><p>内联（在元素内部） 》 内嵌（style) 》 外联</p>
 <p>ID 选择器 &gt; 类选择器 = 属性选择器a[href=”segmentfault.com”]{} &gt; 伪类选择器 &gt; 标签选择器 &gt; = 伪元素选择器</p>
-<ol>
-<li>Bootstrap 实现原理，栅栏布局的实现原理；</li>
-</ol>
-<ol>
-<li>清除浮动的 方式： </li>
-</ol>
-<p>实现办法： </p>
+<h3 id="Bootstrap-实现原理，栅栏布局的实现原理；"><a href="#Bootstrap-实现原理，栅栏布局的实现原理；" class="headerlink" title="Bootstrap 实现原理，栅栏布局的实现原理；"></a>Bootstrap 实现原理，栅栏布局的实现原理；</h3><p>我说的是利用浮动和宽度百分比实现，然后就提到下题了；</p>
+<h3 id="清除浮动的-方式："><a href="#清除浮动的-方式：" class="headerlink" title="清除浮动的 方式："></a>清除浮动的 方式：</h3><p>实现办法： </p>
 <ol>
 <li><p>是在浮动元素后面添加元素，然后设置clear 属性，达到清楚浮动目的</p>
 </li>
@@ -221,23 +204,18 @@ classes that you can use:
 <p> float :left/right;(除了none)</p>
 <p> position:absolute /fixed </p>
 </li>
-<li><p>H5 的API自己都了解那些：(自己突然有点蒙，这块没因为从来没太注意过API这个术语)</p>
-<p>web存储机制:</p>
-<ol>
-<li><p>sessionStorage :是存储于会话阶段的本地存储。页面关闭之后就会消失。存储在sessionStorage 中的数据可以跨越页面刷新而存在，但是对多页面应用有一点的限制。</p>
-<p>//这里添加一个globalStorage和sessionStorage 实现的效果差不多，不过需要自己设置访问域（就是那些数据在那些域可以被访问到）使用 []表示</p>
+</ol>
+<h3 id="H5-的API自己都了解那些：-自己突然有点蒙，这块没因为从来没太注意过API这个术语"><a href="#H5-的API自己都了解那些：-自己突然有点蒙，这块没因为从来没太注意过API这个术语" class="headerlink" title="H5 的API自己都了解那些：(自己突然有点蒙，这块没因为从来没太注意过API这个术语)"></a>H5 的API自己都了解那些：(自己突然有点蒙，这块没因为从来没太注意过API这个术语)</h3><p> web存储机制:</p>
+<pre><code>1. sessionStorage :是存储于会话阶段的本地存储。页面关闭之后就会消失。存储在sessionStorage 中的数据可以跨越页面刷新而存在，但是对多页面应用有一点的限制。
+
+//这里添加一个globalStorage和sessionStorage 实现的效果差不多，不过需要自己设置访问域（就是那些数据在那些域可以被访问到）使用 []表示
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//保存数据</div><div class="line">globalStorage[&apos;wrox.com&apos;].name = &apos;Nicholas&apos;;</div><div class="line">//获取数据</div><div class="line">var name = globalStorage[&apos;wrox.com].name;</div></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-</ol>
-<pre><code>2. localStorage : 是持久化的本地存储，要获取同一个localStorage 必须来自同一个域名，使用同一种协议，在同一个端口上。然后使用setItem ，getItem,removeItem,等函数进行操作。
+
+
+2. localStorage : 是持久化的本地存储，要获取同一个localStorage 必须来自同一个域名，使用同一种协议，在同一个端口上。然后使用setItem ，getItem,removeItem,等函数进行操作。
 
 localStorage 和sessionStorage 都是通过key,value 来取值的。
-</code></pre><ol>
-<li>es6 自己了解那些：</li>
-</ol>
-<p>模板字符串 <code> </code>，末班字符串可以包含一些变量和表达式，使用${}来包含变量和表达式</p>
+</code></pre><h3 id="es6-自己了解那些："><a href="#es6-自己了解那些：" class="headerlink" title="es6 自己了解那些："></a>es6 自己了解那些：</h3><p>模板字符串 <code> </code>，末班字符串可以包含一些变量和表达式，使用${}来包含变量和表达式</p>
 <p>module ，export 和 import </p>
 <p>然后小姐姐问我： import 有几种方式：</p>
 <p>我说：2 种 ，一种是import {} 大括号的方式，这样的方式的话，是因为export 导出的话，必须加{}，而且必须保证export 导出的变量和import 导入的变量必须同名</p>
@@ -247,13 +225,7 @@ localStorage 和sessionStorage 都是通过key,value 来取值的。
 <p>class 如果自己不定义构造函数，自己是默认有一个构造函数的，子类通过extends 实现对父类函数的构造函数的继承，使用super函数。默认是继承无参数的构造函数的继</p>
 <p>承，但是如果父类的构造函数是有参数的话，就需要自己定义有参数的super，(我又提了一下，super 虽然是继承父类的构造函数，但是他的this 还是指向子类。）</p>
 <p>因为会出错。。</p>
-<ol>
-<li><p>NodeJS的API 自己都用了那些：哇塞，这个太多了，自己一时反应不上来啊。。。。还有姐姐问实现原理，自己不会。。。。</p>
-</li>
-<li><p>性能优化</p>
-</li>
-</ol>
-<p>css ：</p>
+<h3 id="NodeJS的API-自己都用了那些：哇塞，这个太多了，自己一时反应不上来啊。。。。还有姐姐问实现原理，自己不会。。。。"><a href="#NodeJS的API-自己都用了那些：哇塞，这个太多了，自己一时反应不上来啊。。。。还有姐姐问实现原理，自己不会。。。。" class="headerlink" title="NodeJS的API 自己都用了那些：哇塞，这个太多了，自己一时反应不上来啊。。。。还有姐姐问实现原理，自己不会。。。。"></a>NodeJS的API 自己都用了那些：哇塞，这个太多了，自己一时反应不上来啊。。。。还有姐姐问实现原理，自己不会。。。。</h3><h3 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h3><p>css ：</p>
 <ol>
 <li>不要使用import ,使用Link (原因:@import影响css文件的加载速度， </li>
 <li>将css 样式表放在head中引入</li>
@@ -281,7 +253,7 @@ localStorage 和sessionStorage 都是通过key,value 来取值的。
 </ol>
 <p>网站的性能优化：</p>
 <h3 id="js-原型是什么："><a href="#js-原型是什么：" class="headerlink" title="js 原型是什么："></a>js 原型是什么：</h3><p>原型是其他对象的基础，原型对象是可以被实例对象所共享的，实例对象和原型对象直接存在一种关系，实例对象拥有一个 内部属性<em>proto</em> 属性绑定到他的原型；对与函数对象来说，就是绑定到函数的prototype 对象；</p>
-<h3 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h3><p>存在一个实例对象，他想要使用某个属性，他会在自己内部先进行查找，如果查找不到，则会去他的原型中进行查找。，然后原型查找原型，就这样一直到 Object.prototype = null ，就停止了查找。这样就形成了原型链；</p>
+<h3 id="原型链-1"><a href="#原型链-1" class="headerlink" title="原型链"></a>原型链</h3><p>存在一个实例对象，他想要使用某个属性，他会在自己内部先进行查找，如果查找不到，则会去他的原型中进行查找。，然后原型查找原型，就这样一直到 Object.prototype = null ，就停止了查找。这样就形成了原型链；</p>
 <h3 id="事件冒泡和事件捕获"><a href="#事件冒泡和事件捕获" class="headerlink" title="事件冒泡和事件捕获"></a>事件冒泡和事件捕获</h3><p>一般情况事件会有三个阶段：捕获，目标事件，冒泡</p>
 <p>事件捕获： 是由外网内进行事件的捕获，知道找到目标事件；<br>事件冒泡：是 由目标事件往外进行出发，就是往上一级进行触发；</p>
 <p>如何防止事件冒泡：<br>e.stopPropagation/ IE: e.cancleBubble = true ；<br>如何阻止默认事件：<br>e.preventDefault/IE : e.returnValur= false;</p>
