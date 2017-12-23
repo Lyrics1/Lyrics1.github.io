@@ -23,7 +23,7 @@
 <meta property="og:site_name" content="Lyrics">
 <meta property="og:description" content="HTML &amp;lt;! DOCTYPE&amp;gt;（ Document Type Declaration） 声明位于文档最前面，告知浏览器如何解析该文档。（是HTML 还是 XHTML)浏览器解析 HTML 文档正文之前就可以确定当前文档的类型，以决定其需要采用的渲染模式  a,  img 的alt 和 title 属性区别： alt :是img 的必须属性，(src),主要是如果页面上图片显示不出来的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-14T01:27:31.106Z">
+<meta property="og:updated_time" content="2017-12-14T09:51:33.173Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="web | Lyrics">
 <meta name="twitter:description" content="HTML &amp;lt;! DOCTYPE&amp;gt;（ Document Type Declaration） 声明位于文档最前面，告知浏览器如何解析该文档。（是HTML 还是 XHTML)浏览器解析 HTML 文档正文之前就可以确定当前文档的类型，以决定其需要采用的渲染模式  a,  img 的alt 和 title 属性区别： alt :是img 的必须属性，(src),主要是如果页面上图片显示不出来的">
@@ -215,6 +215,26 @@ classes that you can use:
 <p>性能优化</p>
 <p>为什么采用多个域名存储网站资源</p>
 <p>浏览器并发的限制，优化页面响应速度，节约cookie 带宽</p>
+</li>
+<li><p>d两栏，左边固定100px，右边自适应</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">.left&#123;</div><div class="line">	width:100px;</div><div class="line">	height:100px;</div><div class="line">	float:left;</div><div class="line">&#125;</div><div class="line">.right&#123;</div><div class="line">	margin-left:100px;</div><div class="line">	border:1px solid #ccc;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>上下左右居中</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">div&#123;</div><div class="line">	position:absolute;</div><div class="line">	width:100px;</div><div class="line">	height:100px;</div><div class="line">	top:50%;</div><div class="line">	height:50%;</div><div class="line">	margin-top:-50px;</div><div class="line">	margin-left:-50px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li><p>几种方法生成三个并排的大小相等的元素’</p>
+<ol>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">div&#123;</div><div class="line">width:33.3%;</div><div class="line">float:left;	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">.content&#123;</div><div class="line">	display:flex;</div><div class="line">&#125;</div><div class="line">.box&#123;</div><div class="line">	flex:1;</div><div class="line">	border:1px solid #ccc;	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">.a&#123;</div><div class="line">	display: inline-block;</div><div class="line">	width:33.3%;</div><div class="line">	 border: solid #777 1px;</div><div class="line">	/*word-spacing: 0;*/</div><div class="line">	margin-left: -5px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
 </li>
 </ol>
 <ol>
