@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      react课程总结 | Lyrics 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="ZF">
+    
+    
+
+    <meta name="description" content="react是什么：react是一个构建UI 的库，是facebook 出品，专注于view 层;一切皆为组件，全部使用es6新语法；react16 是第一个核心代码重写的 版本，整体API变化不大，主要变更了错误处理和生命周期，打包，对开发影响不大  react 的view 语法：   1) Js 里直接写html 2) Class 要写成 className 3)变量使用{}包裹即可  pro">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react课程总结 | Lyrics">
+<meta property="og:url" content="https://lyrics1.github.io/2018/01/28/react课程总结/index.html">
+<meta property="og:site_name" content="Lyrics">
+<meta property="og:description" content="react是什么：react是一个构建UI 的库，是facebook 出品，专注于view 层;一切皆为组件，全部使用es6新语法；react16 是第一个核心代码重写的 版本，整体API变化不大，主要变更了错误处理和生命周期，打包，对开发影响不大  react 的view 语法：   1) Js 里直接写html 2) Class 要写成 className 3)变量使用{}包裹即可  pro">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-01-28T14:13:32.683Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="react课程总结 | Lyrics">
+<meta name="twitter:description" content="react是什么：react是一个构建UI 的库，是facebook 出品，专注于view 层;一切皆为组件，全部使用es6新语法；react16 是第一个核心代码重写的 版本，整体API变化不大，主要变更了错误处理和生命周期，打包，对开发影响不大  react 的view 语法：   1) Js 里直接写html 2) Class 要写成 className 3)变量使用{}包裹即可  pro">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Lyrics</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          &lt; More and better /&gt;
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+                
+                <li class="navigation__item"><a href="https://github.com/Lyrics1" title="" class="">github</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">react课程总结</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2018-01-28" class="post-meta__date date">2018-01-28</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <ol>
+<li><p>react是什么：react是一个构建UI 的库，是facebook 出品，专注于view 层;一切皆为组件，全部使用es6新语法；react16 是第一个核心代码重写的 版本，整体API<br>变化不大，主要变更了错误处理和生命周期，打包，对开发影响不大</p>
+</li>
+<li><p>react 的view 语法：</p>
+</li>
+</ol>
+<p>1) Js 里直接写html</p>
+<p>2) Class 要写成 className</p>
+<p>3)变量使用{}包裹即可</p>
+<ol>
+<li><p>props 可变的，是组件之间进行信息传递的。通过this.props获取</p>
+</li>
+<li><p>state 组件自己内部的状态，设置 this.state= {name :”A”}, 修改 this.setState  是返回一个新的state 状态,而不是修改</p>
+</li>
+<li><p>事件处理： this 的获取</p>
+</li>
+</ol>
+<p>1) 在construct 函数内部使用bind 绑定this，指向 class </p>
+<p> this.事件名 = this.事件名.bind(this);  <figure class="highlight plain"><figcaption><span>onClick</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">2) 使用箭头函数  ``` &lt;button onClick =&#123;()=&gt;this.事件名()&#125;</div></pre></td></tr></table></figure></p>
+<p>3)将出发函数写成箭头函数形式</p>
+<ol>
+<li>react 生命周期</li>
+</ol>
+<p>1） 初始化时期 ：执行 constructor() ，componentWillMoubt() //准备加载组件,render() //渲染产生dom  ,ComponentDidMount() //组件加载完毕</p>
+<p>2） 组件重新渲染生命周期:componentWillReceiveProps() // 组件准备接受父组件的propps,  this.setState()改变 执行 shouldComponentUpdate();//是否更新</p>
+<p>组件  返回 true 表示更新； componentWillUpdate() 组件将要更新；  render（）  ，componmentDidUpdate() //组件更新完毕 </p>
+<p>3） 组件卸载生命周期</p>
+<ol>
+<li>UI库的使用npm install antd-mobile@next –save </li>
+</ol>
+<p>网址 <a href="https://mobile.ant.design/index-cn" target="_blank" rel="external">ant-mobile</a></p>
+<p>按需加载 1）npm install babel-plugin-import –save </p>
+<p>2）将打开package.json ,将原来babel 修改为下面这样</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&quot;babel&quot;: &#123;</div><div class="line">    &quot;presets&quot;: [</div><div class="line">      &quot;react-app&quot;</div><div class="line">    ],</div><div class="line">    &quot;plugins&quot;:[</div><div class="line">      [&quot;import&quot;, &#123; &quot;libraryName&quot;: &quot;antd-mobile&quot;, &quot;style&quot;: &quot;css&quot; &#125;]</div><div class="line">    ]</div><div class="line">  &#125;,</div></pre></td></tr></table></figure>
+<p>3）就不需要引入 css 文件，会实现按需加载</p>
+<ol>
+<li><p>Redux是什么?</p>
+<p>是一个状态管理的库，和react 解耦，单一状态，单项数据流 ；核心概念 store(所有状态） ,state（状态记录）,dispatch(需要什么）， action（要干什么）； reducer(处理变化，拿到state 和action 生成新的state ）</p>
+</li>
+<li><p>Redux 使用：</p>
+</li>
+</ol>
+<p>1） 先是通过 reducer 新建 store ,随时通过 store.getState 获取状态</p>
+<p>2） 需要状态变更，store.dispatch(action)来修改状态</p>
+<p>3）Reducer函数接受state 和action ，返回新的state ,可以用store.subscribe 监听每次修改</p>
+<ol>
+<li>1）redux（默认处理同步）处理异步，需要插件：npm install redux-thunk –save 插件，使用applyMiddlelware 开启thunk 中间件 （在index.js中开启 p 4-4）)</li>
+</ol>
+<p>2）调试工具 npm install redux-devtools-extension 并且开启 </p>
+<p>3）使用react- redux 链接 react 和 redux;</p>
+<p> npm install react-redux –save</p>
+<p> 忘记subscribe 记住reducer ,action,和dispatch,提供两个接口 Provider 和 connect ；</p>
+<p> Provider  组件在应用的最外层，传入store即可，只用一次</p>
+<p>Connect 负责从外部可获取组件需要的参数（Connect 可以使用装饰器的方式写）</p>
+<p>装饰器优化connect 代码 ：npm run eject; npm install babel-plugin-transform-decorators-legacy –save-dev;</p>
+<p>将：<figure class="highlight plain"><figcaption><span>mapStatetoProps</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">	return &#123;num:state&#125;</div><div class="line">&#125;</div><div class="line">const actionCreators =&#123;add,reduce,addAsync&#125; </div><div class="line"></div><div class="line">改写：</div><div class="line">@connect(</div><div class="line">	state=&gt;(&#123;num:state&#125;),</div><div class="line">	&#123;add,reduce,addAsync&#125;</div><div class="line">)</div></pre></td></tr></table></figure></p>
+<p> connect 参数（将什么属性防止在props,想什么方法放入props）自动包含dispatch</p>
+<p>App = connect(mapStatetoProps,actionCreators)(App)</p>
+<ol>
+<li></li>
+</ol>
+
+  </section>
+
+  
+
+<section class="post-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'letian'; 
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+  
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
