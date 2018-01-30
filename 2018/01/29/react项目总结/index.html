@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      react项目总结 | Lyrics 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="ZF">
+    
+    
+
+    <meta name="description" content="react + react-redux + react-router4 + node + mongodb前后端请求： 使用asios 发送异步请求， 端口不一致： 使用proxy 配置转发（package.json)中进行设置 ，（解决跨域，将所有的请求转发）  axios 拦截器，统一进行loading 处理  redux 使用异步数据，渲染页面   axios 安装： npm install">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react项目总结 | Lyrics">
+<meta property="og:url" content="https://lyrics1.github.io/2018/01/29/react项目总结/index.html">
+<meta property="og:site_name" content="Lyrics">
+<meta property="og:description" content="react + react-redux + react-router4 + node + mongodb前后端请求： 使用asios 发送异步请求， 端口不一致： 使用proxy 配置转发（package.json)中进行设置 ，（解决跨域，将所有的请求转发）  axios 拦截器，统一进行loading 处理  redux 使用异步数据，渲染页面   axios 安装： npm install">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-01-30T02:56:35.189Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="react项目总结 | Lyrics">
+<meta name="twitter:description" content="react + react-redux + react-router4 + node + mongodb前后端请求： 使用asios 发送异步请求， 端口不一致： 使用proxy 配置转发（package.json)中进行设置 ，（解决跨域，将所有的请求转发）  axios 拦截器，统一进行loading 处理  redux 使用异步数据，渲染页面   axios 安装： npm install">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Lyrics</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          &lt; More and better /&gt;
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+                
+                <li class="navigation__item"><a href="https://github.com/Lyrics1" title="" class="">github</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">react项目总结</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2018-01-29" class="post-meta__date date">2018-01-29</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h4 id="react-react-redux-react-router4-node-mongodb"><a href="#react-react-redux-react-router4-node-mongodb" class="headerlink" title="react + react-redux + react-router4 + node + mongodb"></a>react + react-redux + react-router4 + node + mongodb</h4><h4 id="前后端请求：-使用asios-发送异步请求，"><a href="#前后端请求：-使用asios-发送异步请求，" class="headerlink" title="前后端请求： 使用asios 发送异步请求，"></a>前后端请求： 使用asios 发送异步请求，</h4><ol>
+<li><p>端口不一致： 使用proxy 配置转发（package.json)中进行设置 ，（解决跨域，将所有的请求转发）</p>
+</li>
+<li><p>axios 拦截器，统一进行loading 处理</p>
+</li>
+<li><p>redux 使用异步数据，渲染页面</p>
+</li>
+</ol>
+<h3 id="axios"><a href="#axios" class="headerlink" title="axios"></a>axios</h3><ol>
+<li><p>安装： npm install axios –save </p>
+</li>
+<li><p>在package.json 添加  “proxy”:”<a href="http://localhost:8080" target="_blank" rel="external">http://localhost:8080</a>“</p>
+</li>
+<li><p>没有使用redux 的时候进行的请求代码</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line">Auth.js</div><div class="line"></div><div class="line">import React from &quot;react&quot;</div><div class="line">import &#123; connect &#125; from &apos;react-redux&apos;</div><div class="line">import &#123; Redirect &#125; from &apos;react-router-dom&apos;</div><div class="line">import &#123; login &#125; from &apos;./Auth.redux&apos;</div><div class="line">import  axios  from &apos;axios&apos;</div><div class="line"></div><div class="line"></div><div class="line">class Auth extends React.Component&#123;</div><div class="line">	constructor(props) &#123;</div><div class="line">	  super(props);</div><div class="line">	</div><div class="line">	  this.state = &#123;</div><div class="line">	  	data:&#123;&#125;</div><div class="line">	  &#125;;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	componentDidMount()&#123;</div><div class="line">		axios.get(&apos;/data&apos;)</div><div class="line">			.then(res=&gt;&#123;</div><div class="line">				if(res.status == 200)&#123;</div><div class="line">					this.setState(&#123;data:res.data&#125;)</div><div class="line">					console.log(res)</div><div class="line">					console.log(this.state.data)</div><div class="line">				&#125;</div><div class="line">				</div><div class="line">			&#125;)</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	render()&#123;</div><div class="line">		if(!this.state.data.length)&#123;</div><div class="line">					return null</div><div class="line">		&#125;</div><div class="line">		console.log(this.props.auth.isAuth)</div><div class="line">		return(</div><div class="line">			&lt;div&gt;</div><div class="line">				&lt;h2&gt;ss&#123;this.state.data[1].user&#125;&lt;/h2&gt;</div><div class="line">				&#123;  this.props.auth.isAuth ? &lt;Redirect to=&apos;/dashboard&apos; /&gt; :null&#125;</div><div class="line">				&lt;h1&gt;需等登录&lt;/h1&gt;	</div><div class="line">				&lt;button onClick=&#123;this.props.login&#125;&gt;登录&lt;/button&gt;</div><div class="line">			&lt;/div&gt;</div><div class="line">			)</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">const mapStateToProps=(state)=&gt;&#123;</div><div class="line">	return (state:state.auth)</div><div class="line">&#125;</div><div class="line">const actionCreators = &#123;login&#125;</div><div class="line"></div><div class="line">Auth = connect(mapStateToProps,actionCreators)(Auth)</div><div class="line">export default Auth</div></pre></td></tr></table></figure>
+<p>使用redux 的axios 请求代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">Auth.js</div><div class="line">import React from &quot;react&quot;</div><div class="line">import &#123; connect &#125; from &apos;react-redux&apos;</div><div class="line">import &#123; Redirect &#125; from &apos;react-router-dom&apos;</div><div class="line">import &#123; login ,getUserData&#125; from &apos;./Auth.redux&apos;</div><div class="line">import  axios  from &apos;axios&apos;</div><div class="line"></div><div class="line"></div><div class="line">class Auth extends React.Component&#123;</div><div class="line">	// constructor(props) &#123;</div><div class="line">	//   super(props);</div><div class="line">	</div><div class="line">	//   this.state = &#123;</div><div class="line">	//   	data:&#123;&#125;</div><div class="line">	//   &#125;;</div><div class="line">	// &#125;</div><div class="line"></div><div class="line">	componentDidMount()&#123;</div><div class="line">		this.props.getUserData();//修改数据</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	render()&#123;</div><div class="line">		console.log(this.props)</div><div class="line">		// if(!this.props.data.length)&#123;</div><div class="line">		// 	return null;</div><div class="line">		// &#125;</div><div class="line">		return(</div><div class="line">			&lt;div&gt;</div><div class="line">				&lt;h2&gt;user:&#123;this.props.auth.user&#125; age:&#123;this.props.auth.age&#125;&lt;/h2&gt;</div><div class="line">				&#123;  this.props.auth.isAuth ? &lt;Redirect to=&apos;/dashboard&apos; /&gt; :null&#125;</div><div class="line">				&lt;h1&gt;需等登录&lt;/h1&gt;	</div><div class="line">				&lt;button onClick=&#123;this.props.login&#125;&gt;登录&lt;/button&gt;</div><div class="line">			&lt;/div&gt;</div><div class="line">			)</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">const mapStateToProps=(state)=&gt;&#123;</div><div class="line">	return (state:state.auth)</div><div class="line">&#125;</div><div class="line">const actionCreators = &#123;login,getUserData&#125;</div><div class="line"></div><div class="line">Auth = connect(mapStateToProps,actionCreators)(Auth)</div><div class="line">export default Auth</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line">Auth.redux.js</div><div class="line"></div><div class="line">import  axios  from &apos;axios&apos;</div><div class="line"></div><div class="line">const LOGIN = &quot;LOGIN&quot;</div><div class="line">const LOGOUT = &quot;LOGUT&quot;</div><div class="line">const USER_DATA = &apos;USER_DATA&apos;</div><div class="line"></div><div class="line">const initState = &#123;</div><div class="line">	isAuth:false,</div><div class="line">	user:&quot;A&quot;,</div><div class="line">	age:20</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">export function auth(state=initState,action)&#123;</div><div class="line">	console.log(state,action)</div><div class="line">	switch(action.type)&#123;</div><div class="line">		case LOGIN:</div><div class="line">			return &#123;...state,isAuth:true&#125;</div><div class="line">		case LOGOUT:</div><div class="line">			return &#123;...state,isAuth:false&#125;</div><div class="line">		case USER_DATA:</div><div class="line">			return &#123;...state,...action.payload&#125;</div><div class="line">		default:</div><div class="line">			return state;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//actions</div><div class="line"></div><div class="line">export function getUserData()&#123;</div><div class="line">	//利用dispatch 通知数据修改</div><div class="line">	return dispatch =&gt;&#123;</div><div class="line">		 	axios.get(&apos;/data&apos;)</div><div class="line">			.then(res=&gt;&#123;</div><div class="line">				if(res.status == 200)&#123;</div><div class="line">					dispatch(userData(res.data))</div><div class="line">				&#125;</div><div class="line">				</div><div class="line">			&#125;)</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">export function userData(data)&#123;</div><div class="line">	return &#123;type:USER_DATA,payload:data&#125;</div><div class="line">&#125;</div><div class="line">export function login()&#123;</div><div class="line">	return &#123;type:LOGIN&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">export function logout ()&#123;</div><div class="line">	return &#123;type:LOGOUT&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li>axios 拦截器：</li>
+</ol>
+
+  </section>
+
+  
+
+<section class="post-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'letian'; 
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+  
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
