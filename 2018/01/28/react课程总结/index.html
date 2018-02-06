@@ -23,7 +23,7 @@
 <meta property="og:site_name" content="Lyrics">
 <meta property="og:description" content="react是什么：react是一个构建UI 的库，是facebook 出品，专注于view 层;一切皆为组件，全部使用es6新语法；react16 是第一个核心代码重写的 版本，整体API变化不大，主要变更了错误处理和生命周期，打包，对开发影响不大react 的view 语法：1) Js 里直接写html 2) Class 要写成 className 3)变量使用{}包裹即可 props 可变的，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-01-30T08:05:41.446Z">
+<meta property="og:updated_time" content="2018-02-05T04:52:10.314Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react课程总结 | Lyrics">
 <meta name="twitter:description" content="react是什么：react是一个构建UI 的库，是facebook 出品，专注于view 层;一切皆为组件，全部使用es6新语法；react16 是第一个核心代码重写的 版本，整体API变化不大，主要变更了错误处理和生命周期，打包，对开发影响不大react 的view 语法：1) Js 里直接写html 2) Class 要写成 className 3)变量使用{}包裹即可 props 可变的，">
@@ -184,6 +184,12 @@ classes that you can use:
 <h4 id="react-生命周期"><a href="#react-生命周期" class="headerlink" title="react 生命周期"></a>react 生命周期</h4><p>1） 初始化时期 ：执行 constructor() ，componentWillMout() //准备加载组件,render() //渲染产生dom  ,ComponentDidMount() //组件加载完毕</p>
 <p>2） 组件重新渲染生命周期:componentWillReceiveProps() // 组件准备接受父组件的props,  this.setState()改变 执行 shouldComponentUpdate();//是否更新组件  返回 true 表示更新； componentWillUpdate() 组件将要更新；  render（）  ，componmentDidUpdate() //组件更新完毕 </p>
 <p>3） 组件卸载生命周期</p>
+<h3 id="react-原理"><a href="#react-原理" class="headerlink" title="react 原理"></a>react 原理</h3><ol>
+<li><p>虚拟dom </p>
+<p>我们所写的 jsx 都会利用 babel 转化为js ，这样就使用crerateElement将所有的 写入内存里面</p>
+</li>
+<li></li>
+</ol>
 <h4 id="UI库的使用npm-install-antd-mobile-next-–save"><a href="#UI库的使用npm-install-antd-mobile-next-–save" class="headerlink" title="UI库的使用npm install antd-mobile@next –save"></a>UI库的使用npm install antd-mobile@next –save</h4><p>网址 <a href="https://mobile.ant.design/index-cn" target="_blank" rel="external">ant-mobile</a></p>
 <p>按需加载 1）npm install babel-plugin-import –save </p>
 <p>2）将打开package.json ,将原来babel 修改为下面这样</p>
@@ -216,6 +222,40 @@ classes that you can use:
 <li>md5 加密 npm install utility</li>
 </ol>
 <p>加密： const utils = require(‘utility’)<br>    function md5Pwd(pwd){<br>        const salt = ‘zhjschdshgo04r&amp;&amp;^<em>((^%$###%&amp;&amp;</em>‘;//加盐，使得更安全<br> return utils.md5(utils.md5(pwd+salt))//双层加密更安全</p>
+<h4 id="清除登录信息"><a href="#清除登录信息" class="headerlink" title="清除登录信息"></a>清除登录信息</h4><figure class="highlight plain"><figcaption><span>install browser-cookies --save</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">import browserCookie from &apos;browser-cookies&apos;</div><div class="line">browserCookie.erase(&apos;userid&apos;)</div></pre></td></tr></table></figure>
+<h4 id="高阶组件"><a href="#高阶组件" class="headerlink" title="高阶组件"></a>高阶组件</h4><ol>
+<li>属性代理</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">function WrapperHello(Comp)&#123;</div><div class="line">	</div><div class="line">	class WrapComp extends Reacr.Component&#123;</div><div class="line">		render()&#123;</div><div class="line">		return(</div><div class="line">			&lt;div&gt;高阶组件&lt;/div&gt;</div><div class="line">			&lt;Comp &#123;...this.props&#125;&gt;&lt;/Comp&gt;</div><div class="line">			)</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return WrapComp</div><div class="line">&#125;</div><div class="line">@WrapperHello //=&gt; Hello = WrapperHello(Hello)</div><div class="line">class Hello extends React.Component&#123;</div><div class="line">	render()&#123;</div><div class="line">	return &lt;div&gt; HEllO &lt;/div&gt;</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">2. 属性继承</div></pre></td></tr></table></figure>
+<p>function WrapperHello(Comp){<br>class WrapperHello extends Hello{</p>
+<pre><code>render(){
+return ( &lt;Comp&gt;&lt;/Comp&gt;)
+}
+}
+</code></pre><p>return WrapComp<br>}</p>
+<p>@WrapperHello //=&gt; Hello = WrapperHello(Hello)<br>class Hello extends React.Component{<br>    render(){<br>    return <div> HEllO </div><br>}<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">####  Socket.Io</div><div class="line"></div><div class="line">##### 是什么？</div><div class="line"> 1) 是基于websocket协议（双向通信）</div><div class="line"> 2) 前后端是通过事件进行双向通信</div><div class="line"> </div><div class="line">##### socket.io 和 Ajax区别：</div><div class="line"></div><div class="line">1. Ajax 是基于http协议，单向的，实时获取信息数据只能采用轮询机制</div><div class="line"></div><div class="line">2. 是基于websocket协议（双向通信）前后端是通过事件进行双向通信</div><div class="line"></div><div class="line"></div><div class="line">##### 后端API /前端</div><div class="line"></div><div class="line">1. Io = require(&apos;socket.io&apos;)(http)</div><div class="line"> import  io from &apos;socket.io-client&apos;</div><div class="line"></div><div class="line">2. io.on 监听事件</div><div class="line"></div><div class="line">3. io.emit 触发事件</div><div class="line"></div><div class="line">4. 发送全局数据：</div><div class="line"></div><div class="line"> io.emit(&apos;recvmsg&apos;,data)</div><div class="line"></div><div class="line">### eslint 代码校验工具</div><div class="line"></div><div class="line">### react16 特有的错误处理机制</div><div class="line"></div><div class="line">### react 性能优化</div><div class="line"></div><div class="line">## 遇到的问题</div><div class="line"></div><div class="line">1. 点击click 没有反应 ：解决：	&lt;Item style=&#123;&#123;zIndex:1&#125;&#125; onClick=&#123;this.logout&#125;&gt;退出登录&lt;/Item&gt;</div><div class="line"></div><div class="line">2.</div></pre></td></tr></table></figure></p>
+<p>这里使用function导致找不到 this ，所以使用箭头函数<br>        socket.on(‘recvmsg’,function(data){<br>            console.log(data)<br>            this.setState({<br>                msg:[…this.state.msg,data.text]<br>            })<br>        })<br>        socket.on(‘recvmsg’,(data)=&gt;{<br>            console.log(data)<br>            this.setState({<br>                msg:[…this.state.msg,data.text]<br>            })<br>        })</p>
+<p>```</p>
+<ol>
+<li><p>Object.values({name:’iii’,age:12})  //结果为 [‘iii’,18]</p>
+</li>
+<li><p>将v.read 改为 true </p>
+</li>
+</ol>
+<p>{…v,read:true}</p>
+<ol>
+<li>Jq 性能优化：<br>$(‘#text’)。find（’img’)<br>$(‘#text img)<br>第一个性能更好，原因是jq 的$符号是从右向左查找的逻辑机制</li>
+</ol>
+<h3 id="服务器端渲染"><a href="#服务器端渲染" class="headerlink" title="服务器端渲染"></a>服务器端渲染</h3><p>/home/lyrics/Git/react-Project/reactApp/node_modules/normalize.css/normalize.css:12<br>html {<br>     ^</p>
+<p>SyntaxError: Unexpected token {<br>    at createScript (vm.js:80:10)<br>    at Object.runInThisContext (vm.js:152:10)<br>    at Module._compile (module.js:605:28)<br>    at Module._extensions..js (module.js:652:10)<br>    at Object.require.extensions.(anonymous function) [as .js] (/home/lyrics/Git/react-Project/reactApp/node_modules/babel-register/lib/node.js:152:7)<br>    at Module.load (module.js:560:32)<br>    at tryModuleLoad (module.js:503:12)<br>    at Function.Module._load (module.js:495:3)<br>    at Module.require (module.js:585:17)<br>    at require (internal/module.js:11:18)</p>
+<p>解决： npm install css-modules-require-hook –save<br>import csshook from ‘css-modules-require-hook/preset’ 在app之前</p>
+<p>// cmrh.conf.js 新建文件<br>module.exports = {<br>  // Same scope name as in webpack build<br>  generateScopedName: ‘[name]<strong>[local]_</strong>[hash:base64:5]’,<br>}</p>
+<h3 id="图片问题"><a href="#图片问题" class="headerlink" title="图片问题"></a>图片问题</h3><p>/home/lyrics/Git/react-Project/reactApp/node_modules/babel-core/lib/transformation/file/index.js:590<br>      throw err;<br>      ^</p>
+<p>SyntaxError: /home/lyrics/Git/react-Project/reactApp/src/component/logo/logo.png: Unexpected character ‘�’ (1:0)</p>
+<blockquote>
+<p>1 | �PNG<br>    | ^<br>  2 | <br>  3 | </p>
+</blockquote>
+<p>解决：npm install asset-require-hook –save </p>
 
   </section>
 
