@@ -16,14 +16,17 @@
     
     
 
-    <meta property="og:type" content="article">
+    <meta name="description" content="react 性能优化react 组件优化  点击 性能3 (不太好） 因为每一次render都需要Bind 一次  this.handleClick()}&amp;gt; 点击 性能3 (不太好） 因为每次都要重新生成一个函数  推荐写法是在constroctor 里面绑定函数   async+await await 必须在 async 内部同步代码1234567891011export function">
+<meta property="og:type" content="article">
 <meta property="og:title" content="react性能优化 | Lyrics">
 <meta property="og:url" content="https://lyrics1.github.io/2018/02/06/react性能优化/index.html">
 <meta property="og:site_name" content="Lyrics">
+<meta property="og:description" content="react 性能优化react 组件优化  点击 性能3 (不太好） 因为每一次render都需要Bind 一次  this.handleClick()}&amp;gt; 点击 性能3 (不太好） 因为每次都要重新生成一个函数  推荐写法是在constroctor 里面绑定函数   async+await await 必须在 async 内部同步代码1234567891011export function">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-02-06T11:26:33.359Z">
+<meta property="og:updated_time" content="2018-02-06T11:27:29.832Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react性能优化 | Lyrics">
+<meta name="twitter:description" content="react 性能优化react 组件优化  点击 性能3 (不太好） 因为每一次render都需要Bind 一次  this.handleClick()}&amp;gt; 点击 性能3 (不太好） 因为每次都要重新生成一个函数  推荐写法是在constroctor 里面绑定函数   async+await await 必须在 async 内部同步代码1234567891011export function">
     
     
     
@@ -173,7 +176,17 @@ classes that you can use:
   </header>
 
   <section id="post-content" class="article-content post">
-    
+    <h3 id="react-性能优化"><a href="#react-性能优化" class="headerlink" title="react 性能优化"></a>react 性能优化</h3><h4 id="react-组件优化"><a href="#react-组件优化" class="headerlink" title="react 组件优化"></a>react 组件优化</h4><ol>
+<li><p><button onclick="{this.handleClick.bind(this)}"> 点击</button> 性能3 (不太好） 因为每一次render都需要Bind 一次</p>
+</li>
+<li><p><button onclick="{()=">this.handleClick()}&gt; 点击</button> 性能3 (不太好） 因为每次都要重新生成一个函数</p>
+</li>
+<li><p>推荐写法是在constroctor 里面绑定函数</p>
+</li>
+</ol>
+<h3 id="async-await-await-必须在-async-内部"><a href="#async-await-await-必须在-async-内部" class="headerlink" title="async+await await 必须在 async 内部"></a>async+await await 必须在 async 内部</h3><p>同步代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">export function readMsg(from)&#123;</div><div class="line">return async(dispatch,getState)=&gt;&#123;</div><div class="line">	const res = await axios.post(&apos;/user/readmsg&apos;,&#123;from&#125;)</div><div class="line">	const userid = getState().user._id</div><div class="line">		if(res.status === 200 &amp;&amp; res.data.code ===0 )&#123;</div><div class="line">			const userid = getState().user._id</div><div class="line">			dispatch(msgRead(&#123;userid,from,num:res.data.num&#125;))</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>异步代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">export function readMsg(from)&#123;</div><div class="line">	return (dispatch,getState)=&gt;&#123;</div><div class="line">		//使promise </div><div class="line">		axios.post(&apos;/user/readmsg&apos;,&#123;from&#125;)</div><div class="line">			.then(res=&gt;&#123;</div><div class="line">				const userid = getState().user._id</div><div class="line">				if(res.status === 200 &amp;&amp; res.data.code ===0 )&#123;</div><div class="line">					const userid = getState().user._id</div><div class="line">					dispatch(msgRead(&#123;userid,from,num:res.data.num&#125;))</div><div class="line">				&#125;</div><div class="line">			&#125;)</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
   </section>
 
   
