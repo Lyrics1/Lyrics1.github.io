@@ -23,7 +23,7 @@
 <meta property="og:site_name" content="Lyrics">
 <meta property="og:description" content="面试官小姐姐很好，就是自己有点紧张，而且基础只是忘得有些多 赶紧来总结一下  . 原型链原型里面有两个比较重要的东西，对象所拥有的 __ proto __ 属性，函数对象所拥有的 prototype 属性，实例对象的__prpto__属性指向原型对象，也就是指向 函数的prototype 对象，实例对象和原型对象之间是一种关联关系，实例对象查找属性的时候会先自身的属性中进行查找，找不到才会从实例">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-23T13:36:28.043Z">
+<meta property="og:updated_time" content="2018-03-03T08:13:05.698Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="baidu One | Lyrics">
 <meta name="twitter:description" content="面试官小姐姐很好，就是自己有点紧张，而且基础只是忘得有些多 赶紧来总结一下  . 原型链原型里面有两个比较重要的东西，对象所拥有的 __ proto __ 属性，函数对象所拥有的 prototype 属性，实例对象的__prpto__属性指向原型对象，也就是指向 函数的prototype 对象，实例对象和原型对象之间是一种关联关系，实例对象查找属性的时候会先自身的属性中进行查找，找不到才会从实例">
@@ -186,7 +186,7 @@ classes that you can use:
 <h3 id="事件冒泡-由内往外）和事件捕获-由外往内）"><a href="#事件冒泡-由内往外）和事件捕获-由外往内）" class="headerlink" title=". 事件冒泡(由内往外）和事件捕获 (由外往内）"></a>. 事件冒泡(由内往外）和事件捕获 (由外往内）</h3><pre><code>事件冒泡是从内往外进行扩散，是从事件目标开始往上冒泡到页面的最上一级标签。
 
 事件捕获是在最上一级标签开始往下查找，直到捕获到事件目标。
-</code></pre><p> 阻止事件冒泡 ： e.stopPropagation();<br> 阻止默认事件 ：e.preventefault();</p>
+</code></pre><p> 阻止事件冒泡 ： e.stopPropagation();<br> 阻止默认事件 ：e.preventdefault();</p>
 <h3 id="css-选择器"><a href="#css-选择器" class="headerlink" title="css 选择器"></a>css 选择器</h3><pre><code>ID 选择器 &gt; 类选择器 = 属性选择器a[href=&quot;segmentfault.com&quot;]{} &gt; 伪类选择器 &gt; 标签选择器 &gt; = 伪元素选择器
 </code></pre><h3 id="css-样式的优先级-忘了，而且我自己把内嵌和内联搞混了）"><a href="#css-样式的优先级-忘了，而且我自己把内嵌和内联搞混了）" class="headerlink" title="css 样式的优先级 (忘了，而且我自己把内嵌和内联搞混了）"></a>css 样式的优先级 (忘了，而且我自己把内嵌和内联搞混了）</h3><p>内联（在元素内部） 》 内嵌（style) 》 外联</p>
 <p>ID 选择器 &gt; 类选择器 = 属性选择器a[href=”segmentfault.com”]{} &gt; 伪类选择器 &gt; 标签选择器 &gt; = 伪元素选择器</p>
@@ -265,6 +265,7 @@ localStorage 和sessionStorage 都是通过key,value 来取值的。
 <p>var B = {<br>    name :”zcy”,<br>    age: 22,<br>}</p>
 <p>A.say(0);//this-&gt;A ，输出： zf200;</p>
 <p>想要输出 zcy22*的话，必须是B调用函数 A的say 方法：所以要进行对this 的重新指向，<br>就需要使用 call/apply/bind</p>
+<p>apply和call都是为了改变某个函数运行时的上下文而存在的（就是为了改变函数内部this的指向）；</p>
 <p>方法：call ，apply 是对函数的直接调用，bind 方法返回的是一个函数，所以需要添加() 进行调用；</p>
 <ol>
 <li>A.say.call(B,<em>);//这样this-&gt;B ，</em> 表示 传入B.say(的参数)</li>
@@ -273,6 +274,9 @@ localStorage 和sessionStorage 都是通过key,value 来取值的。
 </ol>
 <p>相同点：用于改变函数内部this 的指向；this所指的方向都是绑定的第一个参数。</p>
 <p>不同点：call ，apply 是对函数的直接调用，bind 方法返回的是一个函数，所以需要添加() 进行绑定；<br>call 方法传递给调用函数的参数是逐个列出的<br>apply 是需要一个数组的形式传入；</p>
+<ol>
+<li>call与apply都属于Function.prototype的一个方法，所以每个function实例都有call、apply属性</li>
+</ol>
 
   </section>
 
