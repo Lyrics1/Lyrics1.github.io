@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      react 性能优化 | Lyrics 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="ZF">
+    
+    
+
+    <meta name="description" content="react 性能优化react 组件优化  点击 性能3 (不太好） 因为每一次render都需要Bind 一次  this.handleClick()}&amp;gt; 点击 性能3 (不太好） 因为每次都要重新生成一个函数  推荐写法是在constroctor 里面绑定函数   async+await await 必须在 async 内部同步代码1234567891011export function">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react 性能优化 | Lyrics">
+<meta property="og:url" content="https://lyrics1.github.io/2018/03/04/react-性能优化/index.html">
+<meta property="og:site_name" content="Lyrics">
+<meta property="og:description" content="react 性能优化react 组件优化  点击 性能3 (不太好） 因为每一次render都需要Bind 一次  this.handleClick()}&amp;gt; 点击 性能3 (不太好） 因为每次都要重新生成一个函数  推荐写法是在constroctor 里面绑定函数   async+await await 必须在 async 内部同步代码1234567891011export function">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-03-04T14:35:06.111Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="react 性能优化 | Lyrics">
+<meta name="twitter:description" content="react 性能优化react 组件优化  点击 性能3 (不太好） 因为每一次render都需要Bind 一次  this.handleClick()}&amp;gt; 点击 性能3 (不太好） 因为每次都要重新生成一个函数  推荐写法是在constroctor 里面绑定函数   async+await await 必须在 async 内部同步代码1234567891011export function">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Lyrics</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          &lt; More and better /&gt;
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+                
+                <li class="navigation__item"><a href="https://github.com/Lyrics1" title="" class="">github</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">react 性能优化</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2018-03-04" class="post-meta__date date">2018-03-04</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h3 id="react-性能优化"><a href="#react-性能优化" class="headerlink" title="react 性能优化"></a>react 性能优化</h3><h4 id="react-组件优化"><a href="#react-组件优化" class="headerlink" title="react 组件优化"></a>react 组件优化</h4><ol>
+<li><p><button onclick="{this.handleClick.bind(this)}"> 点击</button> 性能3 (不太好） 因为每一次render都需要Bind 一次</p>
+</li>
+<li><p><button onclick="{()=">this.handleClick()}&gt; 点击</button> 性能3 (不太好） 因为每次都要重新生成一个函数</p>
+</li>
+<li><p>推荐写法是在constroctor 里面绑定函数</p>
+</li>
+</ol>
+<h3 id="async-await-await-必须在-async-内部"><a href="#async-await-await-必须在-async-内部" class="headerlink" title="async+await await 必须在 async 内部"></a>async+await await 必须在 async 内部</h3><p>同步代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">export function readMsg(from)&#123;</div><div class="line">return async(dispatch,getState)=&gt;&#123;</div><div class="line">	const res = await axios.post(&apos;/user/readmsg&apos;,&#123;from&#125;)</div><div class="line">	const userid = getState().user._id</div><div class="line">		if(res.status === 200 &amp;&amp; res.data.code ===0 )&#123;</div><div class="line">			const userid = getState().user._id</div><div class="line">			dispatch(msgRead(&#123;userid,from,num:res.data.num&#125;))</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>异步代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">export function readMsg(from)&#123;</div><div class="line">	return (dispatch,getState)=&gt;&#123;</div><div class="line">		//使promise </div><div class="line">		axios.post(&apos;/user/readmsg&apos;,&#123;from&#125;)</div><div class="line">			.then(res=&gt;&#123;</div><div class="line">				const userid = getState().user._id</div><div class="line">				if(res.status === 200 &amp;&amp; res.data.code ===0 )&#123;</div><div class="line">					const userid = getState().user._id</div><div class="line">					dispatch(msgRead(&#123;userid,from,num:res.data.num&#125;))</div><div class="line">				&#125;</div><div class="line">			&#125;)</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+  </section>
+
+  
+
+<section class="post-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'letian'; 
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+  
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
