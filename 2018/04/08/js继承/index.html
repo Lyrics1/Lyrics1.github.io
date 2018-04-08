@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      js继承 | Lyrics 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="ZF">
+    
+    
+
+    <meta name="description" content="构造函数，原型，实例 之间的关系 每个构造函数都有一个原型 ： Function.prototype 每个原型都有执行构造函数的指针 Function.prototype .constructor = Function 每一个实例都有一个指向指向原型的指针 A.proto = Function.prototype继承的实现 原型继承  缺点： 所有的实例会共享父类的属性，导致一个改变全部改变 优点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js继承 | Lyrics">
+<meta property="og:url" content="https://lyrics1.github.io/2018/04/08/js继承/index.html">
+<meta property="og:site_name" content="Lyrics">
+<meta property="og:description" content="构造函数，原型，实例 之间的关系 每个构造函数都有一个原型 ： Function.prototype 每个原型都有执行构造函数的指针 Function.prototype .constructor = Function 每一个实例都有一个指向指向原型的指针 A.proto = Function.prototype继承的实现 原型继承  缺点： 所有的实例会共享父类的属性，导致一个改变全部改变 优点">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-04-08T06:36:12.421Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js继承 | Lyrics">
+<meta name="twitter:description" content="构造函数，原型，实例 之间的关系 每个构造函数都有一个原型 ： Function.prototype 每个原型都有执行构造函数的指针 Function.prototype .constructor = Function 每一个实例都有一个指向指向原型的指针 A.proto = Function.prototype继承的实现 原型继承  缺点： 所有的实例会共享父类的属性，导致一个改变全部改变 优点">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Lyrics</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          &lt; More and better /&gt;
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+                
+                <li class="navigation__item"><a href="https://github.com/Lyrics1" title="" class="">github</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">js继承</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2018-04-08" class="post-meta__date date">2018-04-08</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h3 id="构造函数，原型，实例-之间的关系"><a href="#构造函数，原型，实例-之间的关系" class="headerlink" title="构造函数，原型，实例 之间的关系"></a>构造函数，原型，实例 之间的关系</h3><ul>
+<li>每个构造函数都有一个原型 ： Function.prototype</li>
+<li>每个原型都有执行构造函数的指针 Function.prototype .constructor = Function</li>
+<li>每一个实例都有一个指向指向原型的指针 A.<em>proto</em> = Function.prototype<h3 id="继承的实现"><a href="#继承的实现" class="headerlink" title="继承的实现"></a>继承的实现</h3></li>
+<li><p>原型继承</p>
+<blockquote>
+<p>缺点： 所有的实例会共享父类的属性，导致一个改变全部改变 <br><br>优点 : 可以继承父类原型的方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">1. function parent (name )&#123;</div><div class="line">    this.mame = name;</div><div class="line">    this.color = [&apos;1&apos;,&apos;2&apos;,&apos;3&apos;]</div><div class="line">&#125;</div><div class="line">parent.prototype .say = function()&#123;</div><div class="line">    console.log(&apos;parent&apos;,this.name)</div><div class="line">&#125;</div><div class="line"></div><div class="line">function son (name,age)&#123;</div><div class="line">    this.name = name ;</div><div class="line">    this.age= age;</div><div class="line">&#125;</div><div class="line">son.prototype = new parent(&apos;parent&apos;);</div><div class="line">son.prototype .constructor = son;</div><div class="line">var look = new son(&apos;kk&apos;,20);</div><div class="line">look.color;// [&apos;1&apos;,&apos;2&apos;,&apos;3&apos;]</div><div class="line">look.color.push(&apos;4&apos;)// [&apos;1&apos;,&apos;2&apos;,&apos;3&apos;,&apos;4&apos;]</div><div class="line">var look2 = new son();</div><div class="line">look2.color;// [&apos;1&apos;,&apos;2&apos;,&apos;3&apos;,&apos;4&apos;]</div></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>构造函数继承</p>
+<blockquote>
+<p>  在子类中执行父类的构造函数，使得父类的this 指向子类的实例化对象，在执行父类构造函数时，实例将得到父类的属性和方法 <br><br>缺点：无法继承父类原型的方法<br><br>优点： 不会使得一个改变而改变所有的实例</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"> function parent (name )&#123;</div><div class="line">    this.mame = name;</div><div class="line">    this.color = [&apos;1&apos;,&apos;2&apos;,&apos;3&apos;]</div><div class="line">&#125;</div><div class="line">parent.prototype .say = function()&#123;</div><div class="line">    console.log(&apos;parent&apos;,this.name)</div><div class="line">&#125;</div><div class="line"></div><div class="line">function son (name,age)&#123;</div><div class="line">    parent.call(this);</div><div class="line">  </div><div class="line">    this.name = name ;</div><div class="line">    this.age= age;</div><div class="line">&#125;</div><div class="line">var look = new son();</div><div class="line">look.say();//VM805:1 Uncaught TypeError: look.say is not a function at &lt;anonymous&gt;:1:6</div><div class="line">look.color;//[&quot;1&quot;, &quot;2&quot;, &quot;3&quot;]</div><div class="line">look.color.push(&apos;4&apos;);[&quot;1&quot;, &quot;2&quot;, &quot;3&quot;,&apos;4&apos;]</div><div class="line">var look2 = new son()</div><div class="line">look2.color; //[1,2,3]</div></pre></td></tr></table></figure>
+<ul>
+<li><p>组合式继承</p>
+<blockquote>
+<p>使用原型链和构造函数一起实现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"> function parent (name )&#123;</div><div class="line">    this.mame = name;</div><div class="line">    this.color = [&apos;1&apos;,&apos;2&apos;,&apos;3&apos;]</div><div class="line">&#125;</div><div class="line">parent.prototype .say = function()&#123;</div><div class="line">    console.log(&apos;parent&apos;,this.name)</div><div class="line">&#125;</div><div class="line"></div><div class="line">function son (name,age)&#123;</div><div class="line">    parent.call(this);//第二次调用父类的构造函数</div><div class="line">    this.name = name ;</div><div class="line">    this.age= age;</div><div class="line">&#125;</div><div class="line">son.prototype = new parent(); //第一次调用父类的构造函数</div><div class="line">son.prototype.constructor = son;</div><div class="line">var look = new son();</div><div class="line">look.say();//VM805:1 Uncaught TypeError: look.say is not a function at &lt;anonymous&gt;:1:6</div><div class="line">look.color;//[&quot;1&quot;, &quot;2&quot;, &quot;3&quot;]</div><div class="line">look.color.push(&apos;4&apos;);[&quot;1&quot;, &quot;2&quot;, &quot;3&quot;,&apos;4&apos;]</div><div class="line">var look2 = new son()</div><div class="line">look2.color; //[1,2,3]</div></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>寄生式继承</p>
+<blockquote>
+<p>解决组合继承的缺点：两次调用父类的构造函数</p>
+</blockquote>
+</li>
+</ul>
+<p>```<br> function parent (name ){<br>    this.mame = name;<br>    this.color = [‘1’,’2’,’3’]<br>}<br>parent.prototype .say = function(){<br>    console.log(‘parent’,this.name)<br>}</p>
+<p>function son (name,age){<br>    parent.call(this);<br>    this.name = name ;<br>    this.age= age;<br>}<br>//创建一个对象<br>son.prototype = Object.create(person.prototype)<br>son.prototype.construtor = son<br>var look = new son();<br>look.say();//VM805:1 Uncaught TypeError: look.say is not a function at <anonymous>:1:6<br>look.color;//[“1”, “2”, “3”]<br>look.color.push(‘4’);[“1”, “2”, “3”,’4’]<br>var look2 = new son()<br>look2.color; //[1,2,3]</anonymous></p>
+
+  </section>
+
+  
+
+<section class="post-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'letian'; 
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+  
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
